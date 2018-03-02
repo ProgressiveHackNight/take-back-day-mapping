@@ -1,5 +1,9 @@
 <!--- Keep everything below and click 'Submit new issue'  --->
 
+# Latest News
+
+* [Master Plan](https://github.com/ProgressiveHackNight/take-back-day-mapping/wiki/Feb-27-Planning----Feature-Decisions-&-User-Stories) (As of Feb 27)
+
 ### What problem are we trying to solve?
 
 There are two nation-wide Take Back Days held annually. This is a time for people to take their unused and unneeded prescription drugs to designated sites for free and environmentally-friendly disposal.  
