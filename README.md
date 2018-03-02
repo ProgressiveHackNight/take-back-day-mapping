@@ -36,21 +36,22 @@ The information regarding the locations of take back sites is hard to manage. It
 We need research for the best mapping platform to use to power most of this, and we need basic architectural discussions of how this service should work.
 
 ### How can we contact you outside of Github(list social media or places you're present)?
-_Add your name here if you plan to stay on with this project through the March 11 HackDay!_
+_Add your name [here](https://github.com/ProgressiveHackNight/project-ideas/issues/9) if you plan to stay on with this project through the March 11 HackDay!_
 
-### Team
-This is all based on the presentation from the following people! They presented at the Pre-HackDay!
-Daniel Spencer (full stack dev) - daniel.patrick.spencer (at) gmail.com
-Carlos Merced (front end dev) - mail.merced (at) gmail.com
-Annie Hirshman (designer) - anniehirshman (at) gmail.com
-Anna de Paula Hanika (product) - annadph (at) gmail.com
-Daeha Ko (IT) - daehako (at) gmail.com
-Ritika Madan (Designer) - ritika.madan (at) gmail.com
-Olivia McGill (project manager) - oliviam09 (at) gmail.com
-Alex Hays (Dev) - alexhays (at) gmail.com
-Chandra Thomas - chandra.galbiati (at) gmail.com
-Meka Seymour - mekaseymour (at) gmail.com
+### Contributors
+This is all based on the presentation and planning from the following people! They presented at the Pre-HackDay!
 
+* Daniel Spencer (full stack dev) - daniel.patrick.spencer (at) gmail.com
+* Carlos Merced (front end dev) - mail.merced (at) gmail.com
+* Annie Hirshman (designer) - anniehirshman (at) gmail.com
+* Anna de Paula Hanika (product) - annadph (at) gmail.com
+* Daeha Ko (IT) - daehako (at) gmail.com
+* Ritika Madan (Designer) - ritika.madan (at) gmail.com
+* Olivia McGill (project manager) - oliviam09 (at) gmail.com
+* Alex Hays (Dev) - alexhays (at) gmail.com
+* Chandra Thomas - chandra.galbiati (at) gmail.com
+* Meka Seymour - mekaseymour (at) gmail.com
+* Rapi Castillo - rapi.castillo (at) gmail.com
 
 ----
 If you get stuck at any point, feel free to reach out to the leadership team with an email to steering@progressivehacknight.org or come find an organizer at a HackNight. We're here to help bring great ideas to life!
