@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../stylesheets/App.css';
+import '../../styles/App.css';
 import Map from './Map.jsx';
 import EventsList from './EventsList.jsx';
 
