@@ -33,12 +33,10 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
 
     onMarkerMouseEnter = key => {
       this.props.onHoverKeyChange(key);
-      console.log('on hover key change (enter)');
     };
 
     onMarkerMouseLeave = () => {
       this.props.onHoverKeyChange(null);
-      console.log('on hover key change (leave)');
     };
 
     render() {
@@ -46,10 +44,6 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
 
       const generateMarkers = mapLocations => {
         return mapLocations.map((location, index) => {
-          console.log(location);
-          console.log('this.props.hoverKey', this.props.hoverKey);
-          console.log('location.id', location.id);
-          console.log('this.props.hoverKey === location.id', this.props.hoverKey === location.id);
           return (
             <MapMarker
               key={location.id}
