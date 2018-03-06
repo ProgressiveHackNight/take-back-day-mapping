@@ -1,5 +1,6 @@
 export const mockData = [
   {
+    id: 1,
     name: 'Duane Reade FH',
     type: 'Pharmacy',
     location: '3506 Broadway, Astoria, NY 11106',
@@ -7,6 +8,7 @@ export const mockData = [
     lon: -73.921888,
   },
   {
+    id: 2,
     name: 'CVS Pharmacy',
     type: 'Pharmacy',
     location: '115 W 125th St, New York, NY 10027',
@@ -14,6 +16,7 @@ export const mockData = [
     lon: -73.945651,
   },
   {
+    id: 3,
     name: 'NYPD 19th Precinct',
     type: 'Police Station',
     location: '153 E 67th St, New York, NY 10065',
