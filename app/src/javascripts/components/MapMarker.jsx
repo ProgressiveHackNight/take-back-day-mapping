@@ -9,6 +9,7 @@ class MapMarker extends Component {
   static propTypes = {
     hover: PropTypes.bool,
     text: PropTypes.string,
+    selected: PropTypes.bool,
   };
 
   static defaultProps = {};
@@ -20,21 +21,16 @@ class MapMarker extends Component {
   }
 
   showInfoWindow = () => {
-    if (this.props.hover) {
-      return <InfoWindow style={{ width: 80 }} description={'hello world'} />;
+    if (this.props.selected) {
+      return <InfoWindow style={{ width: 80 }} description={this.props.text} />;
     }
     return '';
   };
 
   render() {
-    const style = this.props.hover ? mapMarkerHoverStyle : mapMarkerStyle;
+    const style = this.props.selected || this.props.hover ? mapMarkerHoverStyle : mapMarkerStyle;
 
-    return (
-      <div style={style}>
-        <div>{this.props.text}</div>
-        {this.showInfoWindow()}
-      </div>
-    );
+    return <div style={style}>{this.showInfoWindow()}</div>;
   }
 }
 

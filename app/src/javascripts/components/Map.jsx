@@ -6,7 +6,6 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 
 import mockData from '../../mockData';
 import MapMarker from '../components/MapMarker.jsx';
-import handleMarkerClick from '../helpers/handleMarkerClick';
 
 import { MARKER_DIAMETER } from '../styles/mapMarkerStyles';
 
@@ -29,6 +28,9 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
 
     constructor(props) {
       super(props);
+      this.state = {
+        selectedMarker: null,
+      };
     }
 
     onMarkerMouseEnter = key => {
@@ -37,6 +39,20 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
 
     onMarkerMouseLeave = () => {
       this.props.onHoverKeyChange(null);
+    };
+
+    onChildClick = (key, childProps) => {
+      // can't just access this.props.children here because of wrapping
+      // controllable component
+
+      // Don't think .find is compatible in IE -- need to test
+      const clickedChild = this.props.locations.find(marker => {
+        return marker.id == this.props.hoverKey;
+      });
+
+      this.setState(state => ({
+        selectedMarker: clickedChild.id,
+      }));
     };
 
     render() {
@@ -49,8 +65,9 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
               key={location.id}
               lat={location.lat}
               lng={location.lon}
-              text={''}
+              text={location.name}
               hover={this.props.hoverKey == location.id}
+              selected={this.state.selectedMarker == location.id}
             />
           );
         });
@@ -62,7 +79,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
             bootstrapURLKeys={{ key: 'AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U' }}
-            onChildClick={handleMarkerClick}
+            onChildClick={this.onChildClick}
             hoverDistance={MARKER_DIAMETER / 2}
             onChildMouseEnter={this.onMarkerMouseEnter}
             onChildMouseLeave={this.onMarkerMouseLeave}

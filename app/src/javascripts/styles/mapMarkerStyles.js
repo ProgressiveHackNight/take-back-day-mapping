@@ -31,4 +31,4 @@ const mapMarkerHoverStyle = {
   height: MARKER_HOVER_HEIGHT, // 2 x height for this particular icon
 };
 
-export { mapMarkerStyle, mapMarkerHoverStyle, MARKER_DIAMETER };
+export { mapMarkerStyle, mapMarkerHoverStyle, MARKER_DIAMETER, MARKER_HOVER_WIDTH, MARKER_HOVER_HEIGHT };
