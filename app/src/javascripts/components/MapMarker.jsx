@@ -1,8 +1,37 @@
-import React, { Component, PropTypes } from 'react';
-import { mapMarkerStyle } from '../styles/mapMarkerStyles';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import shouldPureComponentUpdate from 'react-pure-render/function';
+import { mapMarkerStyle, mapMarkerHoverStyle } from '../styles/mapMarkerStyles';
 
-const MapMarker = ({ text }) => {
-  return <div style={mapMarkerStyle} text={text} />;
-};
+import InfoWindow from './InfoWindow.jsx';
+
+class MapMarker extends Component {
+  static propTypes = {
+    hover: PropTypes.bool,
+    text: PropTypes.string,
+    selected: PropTypes.bool,
+  };
+
+  static defaultProps = {};
+
+  shouldComponentUpdate = shouldPureComponentUpdate;
+
+  constructor(props) {
+    super(props);
+  }
+
+  showInfoWindow = () => {
+    if (this.props.selected) {
+      return <InfoWindow style={{ width: 80 }} description={this.props.text} />;
+    }
+    return '';
+  };
+
+  render() {
+    const style = this.props.selected || this.props.hover ? mapMarkerHoverStyle : mapMarkerStyle;
+
+    return <div style={style}>{this.showInfoWindow()}</div>;
+  }
+}
 
 export default MapMarker;
