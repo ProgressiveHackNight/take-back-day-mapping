@@ -4,7 +4,6 @@ import controllable from 'react-controllables';
 import GoogleMapReact from 'google-map-react';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 
-import mockData from '../../mockData';
 import MapMarker from '../components/MapMarker.jsx';
 
 import { MARKER_DIAMETER } from '../styles/mapMarkerStyles';
@@ -16,12 +15,12 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
       zoom: PropTypes.number, // @controllable
       hoverKey: PropTypes.string, // @controllable
       clickKey: PropTypes.string, // @controllable
+      locations: PropTypes.array,
     };
 
     static defaultProps = {
       center: { lat: 40.744679, lng: -73.948542 },
       zoom: 11,
-      locations: mockData,
     };
 
     shouldComponentUpdate = shouldPureComponentUpdate;
@@ -84,7 +83,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
             onChildMouseEnter={this.onMarkerMouseEnter}
             onChildMouseLeave={this.onMarkerMouseLeave}
           >
-            {generateMarkers(mockData)}
+            {generateMarkers(this.props.locations)}
           </GoogleMapReact>
         </div>
       );
