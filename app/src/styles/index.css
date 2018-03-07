@@ -4,6 +4,7 @@ html, body {
   font-family: sans-serif;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -13,7 +14,7 @@ html, body {
   background-color: #e8e8e866;
   height: 500px;
   width: 100%;
-  padding: 25px;
+  padding: 20px;
 }
 
 .wrapper {
@@ -24,11 +25,16 @@ html, body {
   height: inherit;
 }
 
+@media screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .google-map {
+    display: none;
+  }
+}
+
 .google-map {
   width: 65%;
   height: inherit;
-}
-
-.events-list {
-  align-items: center;
 }
