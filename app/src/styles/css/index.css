@@ -35,6 +35,6 @@ html, body {
 }
 
 .google-map {
-  width: 65%;
+  flex-basis: 65%;
   height: inherit;
 }
