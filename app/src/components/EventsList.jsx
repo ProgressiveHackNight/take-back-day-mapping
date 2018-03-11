@@ -8,6 +8,7 @@ import { listContainerStyle, listStyle, listItemStyle } from '../styles/javascri
 class EventsList extends Component {
   static propTypes = {
     events: PropTypes.array,
+    onLocationSelect: PropTypes.func,
   };
 
   constructor(props) {
@@ -16,7 +17,14 @@ class EventsList extends Component {
 
   generateListItems = events => {
     return events.map(event => {
-      return <ListItem name={event.name} address={event.location} />;
+      return <ListItem
+        name={event.name}
+        address={event.location}
+        key={event.id}
+        id={event.id}
+
+        onLocationSelect={this.props.onLocationSelect}
+      />;
     });
   };
 
