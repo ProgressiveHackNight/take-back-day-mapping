@@ -8,6 +8,8 @@ class ListItem extends Component {
   static propTypes = {
     name: PropTypes.string,
     address: PropTypes.string,
+    id: PropTypes.string,
+    onLocationSelect: PropTypes.func,
   };
 
   constructor(props) {
@@ -32,7 +34,11 @@ class ListItem extends Component {
   render() {
     const style = this.state.hover ? listItemHoverStyle : listItemStyle;
     return (
-      <div onMouseEnter={this.onMouseEnter.bind(this)} onMouseLeave={this.onMouseLeave.bind(this)}>
+      <div
+        onClick={() => this.props.onLocationSelect(this.props.id)}
+        onMouseEnter={this.onMouseEnter.bind(this)}
+        onMouseLeave={this.onMouseLeave.bind(this)}
+      >
         <li style={style}>
           <div>
             <h4>{this.props.name}</h4>

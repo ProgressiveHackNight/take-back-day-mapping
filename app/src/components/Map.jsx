@@ -16,6 +16,8 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
       hoverKey: PropTypes.string, // @controllable
       clickKey: PropTypes.string, // @controllable
       locations: PropTypes.array,
+      selectedMarker: PropTypes.string,
+      onLocationSelect: PropTypes.func,
     };
 
     static defaultProps = {
@@ -27,9 +29,6 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
 
     constructor(props) {
       super(props);
-      this.state = {
-        selectedMarker: null,
-      };
     }
 
     onMarkerMouseEnter = key => {
@@ -40,23 +39,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
       this.props.onHoverKeyChange(null);
     };
 
-    onChildClick = (key, childProps) => {
-      // can't just access this.props.children here because of wrapping
-      // controllable component
-
-      // Don't think .find is compatible in IE -- need to test
-      const clickedChild = this.props.locations.find(marker => {
-        return marker.id == this.props.hoverKey;
-      });
-
-      this.setState(state => ({
-        selectedMarker: clickedChild.id,
-      }));
-    };
-
     render() {
-      const mapLocations = this.props.locations;
-
       const generateMarkers = mapLocations => {
         return mapLocations.map((location, index) => {
           return (
@@ -66,7 +49,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
               lng={location.lon}
               text={location.name}
               hover={this.props.hoverKey == location.id}
-              selected={this.state.selectedMarker == location.id}
+              selected={this.props.selectedMarker == location.id}
             />
           );
         });
@@ -78,7 +61,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
             bootstrapURLKeys={{ key: 'AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U' }}
-            onChildClick={this.onChildClick}
+            onChildClick={this.props.onLocationSelect}
             hoverDistance={MARKER_DIAMETER / 2}
             onChildMouseEnter={this.onMarkerMouseEnter}
             onChildMouseLeave={this.onMarkerMouseLeave}
