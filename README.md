@@ -4,6 +4,24 @@
 
 * [Master Plan](https://github.com/ProgressiveHackNight/take-back-day-mapping/wiki/Feb-27-Planning----Feature-Decisions-&-User-Stories) (As of Feb 27)
 
+# Setup
+
+* Clone project
+
+(If you don't have brew) --
+
+* run `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+* run `install brew`
+
+(Once you have brew) --
+
+* run `brew install yarn`
+
+* run `yarn add react-scripts`
+
+* run `yarn start`
+
 # Take Back Day Events Map
 
 There are two nation-wide Take Back Days held annually. This is a time for people to take their unused and unneeded prescription drugs to designated sites for free and environmentally-friendly disposal.  
