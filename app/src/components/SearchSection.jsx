@@ -1,11 +1,12 @@
 import React from 'react';
 
-import SearchField from './SearchField.jsx';
+import { searchSectionStyle } from '../styles/javascript/searchSection';
+import SearchFieldContainer from '../containers/SearchFieldContainer';
 
 const SearchSection = () => {
   return (
-    <div>
-      <SearchField />
+    <div style={searchSectionStyle}>
+      <SearchFieldContainer />
     </div>
   );
 };

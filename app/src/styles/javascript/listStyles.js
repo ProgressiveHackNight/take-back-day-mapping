@@ -1,5 +1,5 @@
 const listContainerStyle = {
-  height: '100%',
+  height: '450px',
   display: 'flex',
   flexDirection: 'column',
   overflowY: 'auto',
