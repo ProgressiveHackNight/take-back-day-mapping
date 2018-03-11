@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/css/App.css';
 import Map from './Map.jsx';
-import EventsList from './EventsList.jsx';
+import EventsListContainer from '../containers/EventsListContainer';
 import SearchSection from './SearchSection.jsx';
 
 import mockData from '../mockData';
@@ -20,7 +20,7 @@ class App extends Component {
     }));
   }
 
-  handleLocationSelect = (selectedId) => {
+  handleLocationSelect = selectedId => {
     this.setState(state => ({
       selectedLocationId: selectedId,
     }));
@@ -37,10 +37,7 @@ class App extends Component {
           />
           <div>
             <SearchSection />
-            <EventsList
-              events={this.state.locations}
-              onLocationSelect={this.handleLocationSelect}
-            />
+            <EventsListContainer events={mockData} onLocationSelect={this.handleLocationSelect} />
           </div>
         </div>
       </div>
