@@ -6,7 +6,7 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 
 import MapMarker from '../components/MapMarker.jsx';
 
-import { MARKER_DIAMETER } from '../styles/mapMarkerStyles';
+import { MARKER_DIAMETER } from '../styles/javascript/mapMarkerStyles';
 
 const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
   class Map extends Component {

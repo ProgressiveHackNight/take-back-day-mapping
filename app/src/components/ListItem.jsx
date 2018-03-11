@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 import PropTypes from 'prop-types';
 
-import { listItemStyle, listItemHoverStyle } from '../styles/listStyles';
+import { listItemStyle, listItemHoverStyle } from '../styles/javascript/listStyles';
 
 class ListItem extends Component {
   static propTypes = {

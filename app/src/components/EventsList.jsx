@@ -3,7 +3,7 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 import PropTypes from 'prop-types';
 
 import ListItem from './ListItem.jsx';
-import { listContainerStyle, listStyle, listItemStyle } from '../styles/listStyles';
+import { listContainerStyle, listStyle, listItemStyle } from '../styles/javascript/listStyles';
 
 class EventsList extends Component {
   static propTypes = {

@@ -1,6 +1,6 @@
 const types = {
   CHANGE_LOCATION_HOVER: 'CHANGE_LOCATION_HOVER',
+  UPDATE_SEARCH_VALUE: 'UPDATE_SEARCH_VALUE',
 };
 
 export default types;
-

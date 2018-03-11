@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import '../../styles/App.css';
+import '../styles/css/App.css';
 import Map from './Map.jsx';
 import EventsList from './EventsList.jsx';
+import SearchSection from './SearchSection.jsx';
 
-import mockData from '../../mockData';
+import mockData from '../mockData';
 
 class App extends Component {
   render() {
@@ -11,7 +12,10 @@ class App extends Component {
       <div className="container">
         <div className="wrapper">
           <Map locations={mockData} />
-          <EventsList events={mockData} />
+          <div>
+            <SearchSection />
+            <EventsList events={mockData} />
+          </div>
         </div>
       </div>
     );

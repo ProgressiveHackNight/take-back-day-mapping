@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import shouldPureComponentUpdate from 'react-pure-render/function';
-import { mapMarkerStyle, mapMarkerHoverStyle } from '../styles/mapMarkerStyles';
+import { mapMarkerStyle, mapMarkerHoverStyle } from '../styles/javascript/mapMarkerStyles';
 
 import InfoWindow from './InfoWindow.jsx';
 
