@@ -20,6 +20,10 @@ class MapMarker extends Component {
     super(props);
   }
 
+  handleClick() {
+    alert('rsvp');
+  }
+
   showInfoWindow = () => {
     if (this.props.selected) {
       return <InfoWindow style={{ width: 80 }} description={this.props.text} />;
