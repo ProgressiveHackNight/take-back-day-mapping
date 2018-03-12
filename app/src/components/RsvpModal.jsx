@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { modal, modalHidden ,modalContent, modalHeader, close } from '../styles/javascript/RsvpModalStyles';
+import { modal, modalHidden ,modalContent, modalHeader, headerText, closeModal } from '../styles/javascript/RsvpModalStyles';
 
 class RsvpModal extends Component {
 	constructor(props) {
@@ -11,11 +11,11 @@ class RsvpModal extends Component {
 		return(
 			<div style={modalStyle}>
 			  <div style={modalContent}>
-		      <div style={modalHeader}>
-			    <span stlye={close} onClick={this.props.onCloseClick}>&times;</span>
-			    <h2>Modal Header</h2>
-			  </div>
-			  <div ><p>Hello Modal</p></div>
+		        <div style={modalHeader}>
+			      <p style={headerText}>RSVP to this location</p>
+			      <div onClick={this.props.onCloseClick}><span>&times;</span></div>
+			    </div>
+			    <div><p>Hello Modal</p></div>
 			  </div>	
 			</div>
 		);

@@ -1,49 +1,55 @@
 const modal = {
-    display: 'block', /* Hidden by default */
-    position: 'fixed', /* Stay in place */
-    zIndex: '1', /* Sit on top */
+    display: 'block', 
+    position: 'fixed', 
+    zIndex: '1', 
     left: '0',
     top: '0',
-    width: '100%', /* Full width */
-    height: '100%', /* Full height */
-    overflow: 'auto', /* Enable scroll if needed */
-    backgroundColor: 'rgb(0,0,0)', /* Fallback color */
-    backgroundColor: 'rgba(0,0,0,0.4)', /* Black w/ opacity */
+    width: '100%',
+    height: '100%', 
+    overflow: 'auto', 
+    backgroundColor: 'rgb(0,0,0)', 
+    backgroundColor: 'rgba(0,0,0,0.4)', 
 };
 
 const modalHidden = {
-    display: 'none', /* Hidden by default */
-    position: 'fixed', /* Stay in place */
-    zIndex: '1', /* Sit on top */
+    display: 'none',
+    position: 'fixed', 
+    zIndex: '1', 
     left: '0',
     top: '0',
-    width: '100%', /* Full width */
-    height: '100%', /* Full height */
-    overflow: 'auto', /* Enable scroll if needed */
-    backgroundColor: 'rgb(0,0,0)', /* Fallback color */
-    backgroundColor: 'rgba(0,0,0,0.4)', /* Black w/ opacity */
+    width: '100%', 
+    height: '100%', 
+    overflow: 'auto', 
+    backgroundColor: 'rgb(0,0,0)', 
+    backgroundColor: 'rgba(0,0,0,0.4)', 
 };
 
 const modalContent = {
     backgroundColor: '#fefefe',
-    margin: '15% auto', /* 15% from the top and centered */
-    padding: '20px',
+    margin: '15% auto',
     border: '1px solid #888',
-    width: '80%' /* Could be more or less, depending on screen size */
+    borderRadius: '8px',
+    width: '60%',
 };
 
 const modalHeader = {
+    display: 'flex',
     padding: '2px 16px',
-    backgroundColor: '#5cb85c',
+    backgroundColor: '#4E83F8',
+    borderTopLeftRadius: '7px',
+    borderTopRightRadius: '7px',
     color: 'white',
 };
 
-const close = {
-    color: '#aaa',
-    float: 'right',
+const headerText = {
+    flex: '1',
+};
+
+const closeModal = {
+    color: '#00008b',
     fontSize: '28px',
     fontWeight: 'bold',
 };
 
 
-export { modal, modalHidden ,modalContent, modalHeader, close};
+export { modal, modalHidden ,modalContent, modalHeader,headerText, closeModal};
