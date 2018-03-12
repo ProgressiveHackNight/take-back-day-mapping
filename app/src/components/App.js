@@ -41,7 +41,7 @@ class App extends Component {
             <EventsListContainer events={mockData} onLocationSelect={this.handleLocationSelect} />
           </div>
         </div>
-        <RsvpModal visible={this.props.selectedLocation} />
+        <RsvpModal visible={this.props.selectedLocation} onCloseClick={this.props.onCloseClick} />
       </div>
     );
   }

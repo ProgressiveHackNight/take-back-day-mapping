@@ -13,4 +13,4 @@ const handleModalClose = () => dispatch => {
     payload: null,
   });
 };
-export {handleRsvpClick, handleModalClose};
+export { handleRsvpClick, handleModalClose };
