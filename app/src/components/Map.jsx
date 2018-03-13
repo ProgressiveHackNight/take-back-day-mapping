@@ -11,12 +11,12 @@ import { MARKER_DIAMETER } from '../styles/javascript/mapMarkerStyles';
 const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
   class Map extends Component {
     static propTypes = {
-      center: PropTypes.array, // @controllable
+      center: PropTypes.object, // @controllable
       zoom: PropTypes.number, // @controllable
       hoverKey: PropTypes.string, // @controllable
       clickKey: PropTypes.string, // @controllable
       locations: PropTypes.array,
-      selectedMarker: PropTypes.string,
+      selectedMarker: PropTypes.number,
       onLocationSelect: PropTypes.func,
     };
 

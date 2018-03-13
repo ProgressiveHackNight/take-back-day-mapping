@@ -1,6 +1,6 @@
 const toGlobalState = (initialData = {}) => ({
   hover: '',
-  searchValue: '',
+  searchInput: '',
 });
 
 export default toGlobalState;
