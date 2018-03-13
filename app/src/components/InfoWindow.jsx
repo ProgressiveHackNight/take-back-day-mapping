@@ -1,8 +1,26 @@
 import React from 'react';
-import { infoWindowStyle } from '../styles/javascript/infoWindowStyles';
+import {
+  infoWindowStyle,
+  infoContainer,
+  infoContent,
+  infoText,
+  rsvpButton,
+} from '../styles/javascript/infoWindowStyles';
 
-const InfoWindow = ({ description }) => {
-  return <div style={infoWindowStyle}>{description}</div>;
+const InfoWindow = ({ description, address, onClick }) => {
+  return (
+    <div style={infoWindowStyle}>
+      <div style={infoContainer}>
+        <div style={infoContent}>
+          <p style={infoText}>{description}</p>
+          <p style={infoText}>{address}</p>
+        </div>
+        <button style={rsvpButton} onClick={onClick}>
+          Rsvp
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default InfoWindow;

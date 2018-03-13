@@ -10,6 +10,7 @@ class ListItem extends Component {
     address: PropTypes.string,
     id: PropTypes.string,
     onLocationSelect: PropTypes.func,
+    handleRsvpClick: PropTypes.func,
   };
 
   constructor(props) {
@@ -44,7 +45,7 @@ class ListItem extends Component {
             <h4>{this.props.name}</h4>
             <p>{this.props.address}</p>
           </div>
-          <button>rsvp</button>
+          <button onClick={this.props.handleRsvpClick}>rsvp</button>
         </li>
       </div>
     );

@@ -9,9 +9,10 @@
     "react-dom": "^16.2.0",
     "react-pure-render": "^1.0.2",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.1",
+    "react-scripts": "^1.1.1",
     "redux": "^3.7.2",
     "redux-create-action-types": "^2.1.0",
+    "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {

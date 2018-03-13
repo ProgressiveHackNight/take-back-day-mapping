@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 import { mapMarkerStyle, mapMarkerHoverStyle } from '../styles/javascript/mapMarkerStyles';
 
-import InfoWindow from './InfoWindow.jsx';
+import InfoWindowContainer from '../containers/InfoWindowContainer';
 
 class MapMarker extends Component {
   static propTypes = {
@@ -22,7 +22,7 @@ class MapMarker extends Component {
 
   showInfoWindow = () => {
     if (this.props.selected) {
-      return <InfoWindow style={{ width: 80 }} description={this.props.text} />;
+      return <InfoWindowContainer style={{ width: 80 }} address={this.props.address} description={this.props.text} />;
     }
     return '';
   };

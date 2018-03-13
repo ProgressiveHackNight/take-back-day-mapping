@@ -1,11 +1,13 @@
 import React from 'react';
 
-import ListItem from './ListItem.jsx';
+import ListItemContainer from '../containers/ListItemContainer';
 import { listContainerStyle, listStyle, listItemStyle } from '../styles/javascript/listStyles';
 
 const generateListItems = (events, onLocationSelect) => {
   return events.map(event => {
-    return <ListItem name={event.name} address={event.location} onLocationSelect={onLocationSelect} id={event.id} />;
+    return (
+      <ListItemContainer name={event.name} address={event.location} onLocationSelect={onLocationSelect} id={event.id} />
+    );
   });
 };
 
