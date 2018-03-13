@@ -10,6 +10,7 @@ import mockData from '../mockData';
 const defaultState = {
   locations: [],
   selectedLocationId: null,
+  mapCenter: { lat: 40.744679, lng: -73.948542 },
 };
 
 class App extends Component {
@@ -27,6 +28,16 @@ class App extends Component {
     }));
   };
 
+  handleListSelect = (selectedId) => {
+    const selectedLoc = this.state.locations.find(location => location.id == selectedId);
+    if (selectedLoc) {
+      this.setState(state => ({
+        mapCenter: { lat: selectedLoc.lat, lng: selectedLoc.lon },
+        selectedLocationId: selectedId,
+      }));
+    }
+  };
+
   render() {
     return (
       <div className="container">
@@ -35,10 +46,11 @@ class App extends Component {
             locations={this.state.locations}
             selectedMarker={this.state.selectedLocationId}
             onLocationSelect={this.handleLocationSelect}
+            center={this.state.mapCenter}
           />
           <div>
             <SearchSection />
-            <EventsListContainer events={mockData} onLocationSelect={this.handleLocationSelect} />
+            <EventsListContainer events={mockData} onLocationSelect={this.handleListSelect} />
           </div>
         </div>
         <RsvpModal visible={this.props.selectedLocation} onCloseClick={this.props.onCloseClick} />

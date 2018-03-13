@@ -21,7 +21,6 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
     };
 
     static defaultProps = {
-      center: { lat: 40.744679, lng: -73.948542 },
       zoom: 11,
     };
 
@@ -59,7 +58,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
       return (
         <div className="google-map">
           <GoogleMapReact
-            defaultCenter={this.props.center}
+            center={this.props.center}
             defaultZoom={this.props.zoom}
             bootstrapURLKeys={{ key: 'AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U' }}
             onChildClick={this.props.onLocationSelect}
