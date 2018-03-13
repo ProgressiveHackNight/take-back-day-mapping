@@ -31,6 +31,16 @@
 * If tests get an error that looks like `Error: Error watching file for changes: EMFILE` run `brew install watchman`
 * If the app won't compile, and you get an error in compose about not being able to run apply of undefined, try installing react dev tools in chrome
 
+# Process
+* Tasks to do are kept in a trello board: https://trello.com/b/vvN1NJTB/take-back-map
+* If you take a task, move it to the 'In Development' collumn and assign it to yourself
+  * If you feel a task can be broken into several smaller tasks, feel free to break it up
+* Preference small pull requests - is there a way you can do part of the task and merge that in without breaking the app?
+* After you push a branch to github, it will build a preview of your app to netlify (you can find a link in your branch/pull request)
+* Please add tests, and run the tests and the app before merging
+* Please add screenshots of the app to your pull request
+* On merge to master, the new version of the app will build to https://take-back-mapping.netlify.com/
+
 # Take Back Day Events Map
 
 There are two nation-wide Take Back Days held annually. This is a time for people to take their unused and unneeded prescription drugs to designated sites for free and environmentally-friendly disposal.  
