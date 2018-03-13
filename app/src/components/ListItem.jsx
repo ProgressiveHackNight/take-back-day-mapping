@@ -8,7 +8,7 @@ class ListItem extends Component {
   static propTypes = {
     name: PropTypes.string,
     address: PropTypes.string,
-    id: PropTypes.string,
+    id: PropTypes.number,
     onLocationSelect: PropTypes.func,
     handleRsvpClick: PropTypes.func,
   };
