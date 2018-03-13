@@ -4,7 +4,7 @@ import ListItem from '../components/ListItem.jsx';
 import { handleRsvpClick } from '../actions/handleRsvpClick';
 
 const mapDispatchToProps = (dispatch, props) => ({
-  handleRsvpClick: () => dispatch(handleRsvpClick(props.address)),
+  handleRsvpClick: () => dispatch(handleRsvpClick(props.location)),
 });
 
 const ListItemContainer = connect(null, mapDispatchToProps)(ListItem);

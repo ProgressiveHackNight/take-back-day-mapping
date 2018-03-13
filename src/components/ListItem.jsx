@@ -6,9 +6,7 @@ import { listItemStyle, listItemHoverStyle } from '../styles/javascript/listStyl
 
 class ListItem extends Component {
   static propTypes = {
-    name: PropTypes.string,
-    address: PropTypes.string,
-    id: PropTypes.number,
+    location: PropTypes.object,
     onLocationSelect: PropTypes.func,
     handleRsvpClick: PropTypes.func,
   };
@@ -36,14 +34,14 @@ class ListItem extends Component {
     const style = this.state.hover ? listItemHoverStyle : listItemStyle;
     return (
       <div
-        onClick={() => this.props.onLocationSelect(this.props.id)}
+        onClick={() => this.props.onLocationSelect(this.props.location.id)}
         onMouseEnter={this.onMouseEnter.bind(this)}
         onMouseLeave={this.onMouseLeave.bind(this)}
       >
         <li style={style}>
           <div>
-            <h4>{this.props.name}</h4>
-            <p>{this.props.address}</p>
+            <h4>{this.props.location.name}</h4>
+            <p>{this.props.location.location}</p>
           </div>
           <button onClick={this.props.handleRsvpClick}>rsvp</button>
         </li>

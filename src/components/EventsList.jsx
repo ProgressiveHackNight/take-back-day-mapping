@@ -5,9 +5,7 @@ import { listContainerStyle, listStyle, listItemStyle } from '../styles/javascri
 
 const generateListItems = (events, onLocationSelect) => {
   return events.map(event => {
-    return (
-      <ListItemContainer name={event.name} address={event.location} onLocationSelect={onLocationSelect} id={event.id} key={event.id} />
-    );
+    return <ListItemContainer location={event} onLocationSelect={onLocationSelect} id={event.id} key={event.id} />;
   });
 };
 
