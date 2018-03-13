@@ -18,9 +18,18 @@
 
 * run `brew install yarn`
 
-* run `yarn add react-scripts`
+* run `yarn`
 
+### Run the app
 * run `yarn start`
+
+### Run tests
+* run `yarn test `
+
+### Troubleshooting: 
+* If install or start doesn't work, try running `yarn add react-scripts`
+* If tests get an error that looks like `Error: Error watching file for changes: EMFILE` run `brew install watchman`
+* If the app won't compile, and you get an error in compose about not being able to run apply of undefined, try installing react dev tools in chrome
 
 # Take Back Day Events Map
 
