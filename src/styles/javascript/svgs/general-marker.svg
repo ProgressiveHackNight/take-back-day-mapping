@@ -1,0 +1,13 @@
+<svg width="44px" height="48px" viewBox="0 0 44 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="square-pin" fill-rule="nonzero">
+            <polygon id="Shape" fill-opacity="0.897475091" fill="#AA32FF" points="44 0 0 0 0 43 16 43 22 48 28 43 44 43"></polygon>
+            <g id="postal-code-prefix" transform="translate(15.000000, 11.000000)" fill="#FFFFFF">
+                <path d="M7,0 C3.13413333,0 0,3.06169877 0,6.83822324 C0,10.6152077 7,23 7,23 C7,23 14,10.6152077 14,6.83822324 C14,3.06169877 10.8658667,0 7,0 Z M6.97713333,8.88334233 C5.78386667,8.88334233 4.81693333,7.93806124 4.81693333,6.77290454 C4.81693333,5.60682786 5.78386667,4.66200676 6.97713333,4.66200676 C8.17133333,4.66200676 9.13826667,5.60682786 9.13826667,6.77290454 C9.13826667,7.93806124 8.17133333,8.88334233 6.97713333,8.88334233 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,9 +1,10 @@
 import types from '../actionTypes';
 
-const hover = (state = '', { type }) => {
+const hover = (state = '', { type, payload }) => {
   switch (type) {
-    case types.CHANGE_LOCATION_HOVER:
-      console.log('hovering new location');
+    case types.BEGIN_LOCATION_HOVER:
+      return payload;
+    case types.END_LOCATION_HOVER:
       return null;
     default:
       return state;

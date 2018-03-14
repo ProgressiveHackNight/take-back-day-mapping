@@ -18,25 +18,13 @@ class ListItem extends Component {
     };
   }
 
-  onMouseEnter() {
-    this.setState(state => ({
-      hover: true,
-    }));
-  }
-
-  onMouseLeave() {
-    this.setState(state => ({
-      hover: false,
-    }));
-  }
-
   render() {
-    const style = this.state.hover ? listItemHoverStyle : listItemStyle;
+    const style = this.props.hover ? listItemHoverStyle : listItemStyle;
     return (
       <div
         onClick={() => this.props.onLocationSelect(this.props.location.id)}
-        onMouseEnter={this.onMouseEnter.bind(this)}
-        onMouseLeave={this.onMouseLeave.bind(this)}
+        onMouseEnter={this.props.onHover}
+        onMouseLeave={this.props.onHoverEnd}
       >
         <li style={style}>
           <div>
