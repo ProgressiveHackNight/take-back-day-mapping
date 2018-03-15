@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 
-import ListItem from '../components/ListItem.jsx';
-import { handleRsvpClick } from '../actions/handleRsvpClick';
+import MapMarker from '../components/MapMarker.jsx';
 import { beginLocationHover, endLocationHover } from '../actions/handleHover';
 import isHoveredLocation from '../selectors/isHoveredLocation';
 
@@ -10,11 +9,10 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  handleRsvpClick: () => dispatch(handleRsvpClick(props.location)),
   onHover: () => dispatch(beginLocationHover(props.location)),
   onHoverEnd: () => dispatch(endLocationHover()),
 });
 
-const ListItemContainer = connect(mapStateToProps, mapDispatchToProps)(ListItem);
+const MapMarkerContainer = connect(mapStateToProps, mapDispatchToProps)(MapMarker);
 
-export default ListItemContainer;
+export default MapMarkerContainer;

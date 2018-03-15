@@ -1,34 +1,49 @@
-const iconUrl = require('./svgs/map_icon_std.svg');
+const squarePin = require('./svgs/pharmacy-marker.svg');
+const policeIcon = require('./svgs/police-marker.svg');
+const healthIcon = require('./svgs/health-marker.svg');
+const defaultIcon = require('./svgs/general-marker.svg');
 
-const MARKER_DIAMETER = 25;
-const MARKER_WIDTH = 25;
-const MARKER_HEIGHT = 32.5;
+const MARKER_WIDTH = 40;
+const SQUARE_PIN_HEIGHT = 43;
+const MARKER_HOVER_WIDTH = MARKER_WIDTH * 1.5;
+const MARKER_HOVER_HEIGHT = SQUARE_PIN_HEIGHT * 1.5;
 
-const MARKER_HOVER_WIDTH = MARKER_WIDTH * 2;
-const MARKER_HOVER_HEIGHT = MARKER_HEIGHT * 2;
+const markerIcons = {
+  Pharmacy: squarePin,
+  Police: policeIcon,
+  Hospital: healthIcon,
+};
 
 const mapMarkerStyle = {
-  // initially any map object has left top corner at lat lng coordinates
-  // it's on you to set object origin to 0,0 coordinates
   position: 'absolute',
-  width: 25,
-  height: 32.5,
-  left: -MARKER_DIAMETER / 2, // -12.5
-  top: -MARKER_DIAMETER / 2, // -12.5
-
-  //borderRadius: MARKER_DIAMETER,
-  // backgroundColor: 'red',
-  backgroundImage: `url(${iconUrl})`,
   backgroundPosition: 'center center no-repeat',
   backgroundSize: 'cover',
 };
 
-const mapMarkerHoverStyle = {
-  ...mapMarkerStyle,
-  left: -MARKER_DIAMETER,
-  top: -MARKER_DIAMETER * 2,
-  width: MARKER_HOVER_WIDTH,
-  height: MARKER_HOVER_HEIGHT, // 2 x height for this particular icon
+const getMarkerStyle = type => {
+  const markerIcon = markerIcons[type] ? markerIcons[type] : defaultIcon;
+
+  return {
+    ...mapMarkerStyle,
+    width: MARKER_WIDTH,
+    height: SQUARE_PIN_HEIGHT,
+    left: -MARKER_WIDTH / 2,
+    top: -MARKER_WIDTH / 2,
+    backgroundImage: `url(${markerIcon})`,
+  };
 };
 
-export { mapMarkerStyle, mapMarkerHoverStyle, MARKER_DIAMETER, MARKER_HOVER_WIDTH, MARKER_HOVER_HEIGHT };
+const getMarkerHoverStyle = type => {
+  const markerIcon = markerIcons[type] ? markerIcons[type] : defaultIcon;
+
+  return {
+    ...mapMarkerStyle,
+    width: MARKER_HOVER_WIDTH,
+    height: MARKER_HOVER_HEIGHT,
+    left: -MARKER_WIDTH,
+    top: -MARKER_WIDTH,
+    backgroundImage: `url(${markerIcon})`,
+  };
+};
+
+export { MARKER_WIDTH, MARKER_HOVER_WIDTH, MARKER_HOVER_HEIGHT, getMarkerStyle, getMarkerHoverStyle };

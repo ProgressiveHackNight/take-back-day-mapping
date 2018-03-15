@@ -18,7 +18,7 @@ export const mockData = [
   {
     id: 3,
     name: 'NYPD 19th Precinct',
-    type: 'Police Station',
+    type: 'Police',
     location: '153 E 67th St, New York, NY 10065',
     lat: 40.76743,
     lon: -73.963779,
@@ -26,7 +26,7 @@ export const mockData = [
   {
     id: 4,
     name: 'NYPD 6th Precinct',
-    type: 'Police Station',
+    type: 'Police',
     location: '298-200 W 21st St, New York, NY 10011',
     lat: 40.743807,
     lon: -73.998831,
@@ -36,7 +36,7 @@ export const mockData = [
     name: 'Amsterdam Pharmacy',
     type: 'Pharmacy',
     location: '1743 Amsterdam Ave, New York, NY 10031',
-    lat: 40.829800,
+    lat: 40.8298,
     lon: -73.945987,
   },
   {
@@ -74,7 +74,7 @@ export const mockData = [
   {
     id: 10,
     name: 'Germantown Police Department',
-    type: 'Police Station',
+    type: 'Police',
     location: '50 Palatine Park Rd, Germantown, NY 12526',
     lat: 42.154952,
     lon: -73.887798,

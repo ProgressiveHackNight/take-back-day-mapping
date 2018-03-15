@@ -4,9 +4,9 @@ import controllable from 'react-controllables';
 import GoogleMapReact from 'google-map-react';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 
-import MapMarker from '../components/MapMarker.jsx';
+import MapMarkerContainer from '../containers/MapMarkerContainer';
 
-import { MARKER_DIAMETER } from '../styles/javascript/mapMarkerStyles';
+import { MARKER_WIDTH } from '../styles/javascript/mapMarkerStyles';
 
 const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
   class Map extends Component {
@@ -42,13 +42,11 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
       const generateMarkers = mapLocations => {
         return mapLocations.map((location, index) => {
           return (
-            <MapMarker
+            <MapMarkerContainer
               key={location.id}
+              location={location}
               lat={location.lat}
               lng={location.lon}
-              text={location.name}
-              address={location.location}
-              hover={this.props.hoverKey == location.id}
               selected={this.props.selectedMarker == location.id}
             />
           );
@@ -62,7 +60,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
             defaultZoom={this.props.zoom}
             bootstrapURLKeys={{ key: 'AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U' }}
             onChildClick={this.props.onLocationSelect}
-            hoverDistance={MARKER_DIAMETER / 2}
+            hoverDistance={MARKER_WIDTH / 2}
             onChildMouseEnter={this.onMarkerMouseEnter}
             onChildMouseLeave={this.onMarkerMouseLeave}
           >
