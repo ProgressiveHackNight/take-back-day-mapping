@@ -43,13 +43,10 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
         return mapLocations.map((location, index) => {
           return (
             <MapMarkerContainer
-              location={location}
               key={location.id}
+              location={location}
               lat={location.lat}
               lng={location.lon}
-              text={location.name}
-              type={location.type}
-              address={location.location}
               selected={this.props.selectedMarker == location.id}
             />
           );

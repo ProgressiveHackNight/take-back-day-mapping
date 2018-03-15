@@ -13,8 +13,10 @@ import InfoWindowContainer from '../containers/InfoWindowContainer';
 class MapMarker extends Component {
   static propTypes = {
     hover: PropTypes.bool,
-    text: PropTypes.string,
+    location: PropTypes.object,
     selected: PropTypes.bool,
+    lat: PropTypes.number,
+    lng: PropTypes.number,
   };
 
   static defaultProps = {};
@@ -27,14 +29,20 @@ class MapMarker extends Component {
 
   showInfoWindow = () => {
     if (this.props.selected) {
-      return <InfoWindowContainer style={{ width: 80 }} address={this.props.address} description={this.props.text} />;
+      return (
+        <InfoWindowContainer
+          style={{ width: 80 }}
+          address={this.props.location.location}
+          description={this.props.location.name}
+        />
+      );
     }
     return '';
   };
 
   render() {
-    const normalMarkerStyle = getMarkerStyle(this.props.type);
-    const hoverMarkerStyle = getMarkerHoverStyle(this.props.type);
+    const normalMarkerStyle = getMarkerStyle(this.props.location.type);
+    const hoverMarkerStyle = getMarkerHoverStyle(this.props.location.type);
     const style = this.props.selected || this.props.hover ? hoverMarkerStyle : normalMarkerStyle;
 
     return (
