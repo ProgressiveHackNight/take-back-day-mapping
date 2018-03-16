@@ -1,3 +1,7 @@
+const listSection = {
+  paddingLeft: 40,
+};
+
 const listContainerStyle = {
   height: '450px',
   display: 'flex',
@@ -7,14 +11,17 @@ const listContainerStyle = {
 
 const listStyle = {
   listStyle: 'none',
+  padding: 0,
+  margin: 0,
+  display: 'flex',
+  flexDirection: 'column',
 };
 
 const listItemStyle = {
-  marginBottom: 15,
   paddingTop: 10,
   paddingBottom: 30,
-  height: 90,
-  borderBottom: '1px dotted #000000',
+  height: 130,
+  borderBottom: '0.5px solid rgba(0, 0, 0, 0.27)',
 };
 
 const listItemHoverStyle = {
@@ -22,4 +29,16 @@ const listItemHoverStyle = {
   backgroundColor: 'white',
 };
 
-export { listContainerStyle, listStyle, listItemStyle, listItemHoverStyle };
+const listButtonStyle = {
+  backgroundColor: '#69C109',
+  color: 'white',
+  borderRadius: '22.5px',
+  height: '40px',
+  width: '122px',
+  fontFamily: 'Avenir',
+  fontSize: '18px',
+  fontWeight: 'bold',
+  border: 'none',
+};
+
+export { listSection, listContainerStyle, listStyle, listItemStyle, listItemHoverStyle, listButtonStyle };

@@ -5,6 +5,8 @@ import EventsListContainer from '../containers/EventsListContainer';
 import SearchSection from './SearchSection.jsx';
 import RsvpModal from './RsvpModal.jsx';
 
+import { listSection } from '../styles/javascript/listStyles';
+
 import mockData from '../mockData';
 
 const defaultState = {
@@ -28,7 +30,7 @@ class App extends Component {
     }));
   };
 
-  handleListSelect = (selectedId) => {
+  handleListSelect = selectedId => {
     const selectedLoc = this.state.locations.find(location => location.id == selectedId);
     if (selectedLoc) {
       this.setState(state => ({
@@ -48,7 +50,7 @@ class App extends Component {
             onLocationSelect={this.handleLocationSelect}
             center={this.state.mapCenter}
           />
-          <div>
+          <div style={listSection}>
             <SearchSection />
             <EventsListContainer events={mockData} onLocationSelect={this.handleListSelect} />
           </div>
