@@ -6,6 +6,11 @@ import {
   modalHeader,
   headerText,
   closeModal,
+  modalWrapper,
+  closeButton,
+  modalButtonsContainer,
+  modalButtonStyle,
+  modalAddressStyles,
 } from '../styles/javascript/RsvpModalStyles';
 
 class RsvpModal extends Component {
@@ -13,23 +18,23 @@ class RsvpModal extends Component {
     super(props);
   }
 
-  onCloseClick = () => {
-    console.log('close click');
-  };
-
   render() {
     const modalStyle = this.props.visible ? modal : modalHidden;
     return (
       <div style={modalStyle}>
         <div style={modalContent}>
-          <div style={modalHeader}>
-            <p style={headerText}>RSVP to this location</p>
-            <div onClick={this.props.onCloseClick}>
-              <span>&times;</span>
+          <div style={modalWrapper}>
+            <div style={modalHeader}>
+              <p style={headerText}>Get a reminder to drop off at this location</p>
+              <div onClick={this.props.onCloseClick}>
+                <span style={closeButton}>&times;</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <p>Hello Modal</p>
+            <h4 style={modalAddressStyles}>{this.props.address}</h4>
+            <div style={modalButtonsContainer}>
+              <button style={modalButtonStyle}>text</button>
+              <button style={modalButtonStyle}>email</button>
+            </div>
           </div>
         </div>
       </div>

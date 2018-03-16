@@ -3,7 +3,7 @@ import '../styles/css/App.css';
 import Map from './Map.jsx';
 import EventsListContainer from '../containers/EventsListContainer';
 import SearchSection from './SearchSection.jsx';
-import RsvpModal from './RsvpModal.jsx';
+import ModalContainer from '../containers/ModalContainer';
 
 import { listSection } from '../styles/javascript/listStyles';
 
@@ -55,7 +55,7 @@ class App extends Component {
             <EventsListContainer events={mockData} onLocationSelect={this.handleListSelect} />
           </div>
         </div>
-        <RsvpModal visible={this.props.selectedLocation} onCloseClick={this.props.onCloseClick} />
+        <ModalContainer visible={this.props.selectedLocation} onCloseClick={this.props.onCloseClick} />
       </div>
     );
   }
