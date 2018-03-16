@@ -1,10 +1,15 @@
 import mockData from '../mockData';
 
+const jsonEndpoint = 'https://takebackday.infoloom.com/media/output.json';
+
 export const fetchLocations = () => (
- toLocations(mockData)
+ fetch(jsonEndpoint)
+   .then(resp => resp.json())
+   .then(resp => toLocations(resp))
+   .catch(() => toLocations(mockData))
 );
 
-const toLocations = (apiLocations) => (
+export const toLocations = (apiLocations) => (
   apiLocations.map((location, idx) => ({
     id: idx,
     name: location.name,
