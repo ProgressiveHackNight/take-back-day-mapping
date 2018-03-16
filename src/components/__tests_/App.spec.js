@@ -1,15 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { mount } from 'enzyme';
 import configureStore from '../../configureStore';
 import App from '../App';
+import Map from '../Map';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <Provider store={configureStore()}>
-      <App />
-    </Provider>,
-    div);
-  ReactDOM.unmountComponentAtNode(div);
+
+describe('App', () => {
+
+  let wrapper;
+  let fetchStub;
+
+  beforeEach(() => {
+    fetchStub = jest.fn();
+
+    wrapper = mount(
+      <Provider store={configureStore()}>
+        <App locations={[]} fetchLocations={fetchStub} />
+      </Provider>,
+    );
+  });
+
+  it('renders fetches locations on mount', () => {
+    expect(fetchStub).toHaveBeenCalled();
+  });
+
+  it('mounts map', () => {
+    expect(wrapper.find(Map).length).toEqual(1);
+  })
 });
+

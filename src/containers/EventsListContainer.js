@@ -1,18 +1,16 @@
 import { connect } from 'react-redux';
 import EventsList from '../components/EventsList.jsx';
 
-import mockData from '../mockData';
-
 const showEvents = state => {
   if (state.searchInput) {
-    return mockData.filter(event => {
+    return state.locations.filter(event => {
       const eventName = event.name.toLowerCase();
       const eventAddress = event.location.toLowerCase();
       const searchInput = state.searchInput.toLowerCase();
       return eventName.indexOf(searchInput) !== -1 || eventAddress.indexOf(searchInput) !== -1;
     });
   }
-  return mockData;
+  return state.locations;
 };
 
 const mapStateToProps = state => ({
