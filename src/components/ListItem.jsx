@@ -2,7 +2,20 @@ import React, { Component } from 'react';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 import PropTypes from 'prop-types';
 
-import { listItemStyle, listItemHoverStyle } from '../styles/javascript/listStyles';
+import { listItemStyle, listItemHoverStyle, listButtonStyle } from '../styles/javascript/listStyles';
+
+const locationTitleStyle = {
+  color: '#4B4B4B',
+  fontSize: 20,
+  fontFamily: 'Avenir',
+  fontWeight: 'bold',
+};
+
+const locationAddressStyle = {
+  color: '#8C8C8C',
+  fontSize: 14,
+  fontFamily: 'Avenir',
+};
 
 class ListItem extends Component {
   static propTypes = {
@@ -10,13 +23,6 @@ class ListItem extends Component {
     onLocationSelect: PropTypes.func,
     handleRsvpClick: PropTypes.func,
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      hover: false,
-    };
-  }
 
   render() {
     const style = this.props.hover ? listItemHoverStyle : listItemStyle;
@@ -28,10 +34,12 @@ class ListItem extends Component {
       >
         <li style={style}>
           <div>
-            <h4>{this.props.location.name}</h4>
-            <p>{this.props.location.location}</p>
+            <p style={locationTitleStyle}>{this.props.location.name}</p>
+            <p style={locationAddressStyle}>{this.props.location.location}</p>
           </div>
-          <button onClick={this.props.handleRsvpClick}>rsvp</button>
+          <button style={listButtonStyle} onClick={this.props.handleRsvpClick}>
+            remind
+          </button>
         </li>
       </div>
     );
