@@ -17,7 +17,6 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchLocations();
-    console.log('loc', this.props.locations)
   }
 
   handleLocationSelect = selectedId => {
