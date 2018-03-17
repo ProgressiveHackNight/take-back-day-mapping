@@ -4,7 +4,7 @@ import InfoWindow from '../components/InfoWindow.jsx';
 import { handleRsvpClick } from '../actions/handleRsvpClick';
 
 const mapDispatchToProps = (dispatch, props) => ({
-  onClick: () => dispatch(handleRsvpClick(props.address)),
+  onClick: () => dispatch(handleRsvpClick(props.location)),
 });
 
 const InfoWindowContainer = connect(null, mapDispatchToProps)(InfoWindow);

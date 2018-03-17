@@ -26,7 +26,7 @@ const listItemStyle = {
 
 const listItemHoverStyle = {
   ...listItemStyle,
-  backgroundColor: 'white',
+  backgroundColor: '#EFEFEF',
 };
 
 const listButtonStyle = {
