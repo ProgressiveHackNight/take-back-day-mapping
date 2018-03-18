@@ -4,7 +4,7 @@ import {
   infoContainer,
   infoContent,
   infoText,
-  rsvpButton,
+  plainButton,
 } from '../styles/javascript/infoWindowStyles';
 
 const InfoWindow = ({ location, onClick }) => {
@@ -16,7 +16,7 @@ const InfoWindow = ({ location, onClick }) => {
           <p style={infoText}>{location.location}</p>
         </div>
 
-        <button style={rsvpButton} onClick={onClick}>
+        <button style={plainButton} onClick={onClick}>
           get reminder
         </button>
       </div>

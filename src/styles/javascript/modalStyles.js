@@ -11,48 +11,30 @@ const modal = {
   backgroundColor: 'rgba(0,0,0,0.4)',
 };
 
-const modalHidden = {
-  ...modal,
-  display: 'none',
-};
-
-const modalContent = {
+const modalWrapper = {
   backgroundColor: '#fefefe',
   margin: '15% auto',
   border: '1px solid #888',
   borderRadius: '8px',
   width: '400px',
-};
-
-const modalHeader = {
-  display: 'flex',
-  borderTopLeftRadius: '7px',
-  borderTopRightRadius: '7px',
-  color: '#4B4B4B',
-};
-
-const headerText = {
-  flex: '1',
-};
-
-const closeModal = {
-  color: '#00008b',
-  fontSize: '28px',
-  fontWeight: 'bold',
-};
-
-const modalWrapper = {
-  padding: 20,
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'center',
+  paddingBottom: '15px',
+};
+
+const closeButtonWrapper = {
+  alignSelf: 'flex-end',
+  marginTop: '15px',
+  marginRight: '15px',
 };
 
 const closeButton = {
-  fontSize: '18px',
+  fontSize: '16px',
   backgroundColor: '#C2C2C2',
-  height: '40px',
-  width: '40px',
-  borderRadius: '40px',
+  height: '30px',
+  width: '30px',
+  borderRadius: '30px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -63,6 +45,8 @@ const modalButtonsContainer = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-evenly',
+  marginTop: 15,
+  marginBottom: 10,
 };
 
 const modalButtonStyle = {
@@ -84,16 +68,38 @@ const modalAddressStyles = {
   fontWeight: 'bold',
 };
 
+const reminderText = {
+  marginBottom: 30,
+  color: '#4B4B4B',
+  fontSize: '16px',
+};
+
+const phoneInputSectionWrapper = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+};
+
+const plainButton = {
+  background: 'none',
+  color: 'black',
+  textDecoration: 'underline',
+  fontWeight: 'bold',
+  border: 'none',
+  margin: 0,
+  padding: 0,
+  display: 'block',
+};
+
 export {
   modal,
-  modalHidden,
-  modalContent,
-  modalHeader,
-  headerText,
-  closeModal,
   modalWrapper,
   closeButton,
+  closeButtonWrapper,
+  plainButton,
   modalButtonsContainer,
   modalButtonStyle,
   modalAddressStyles,
+  reminderText,
+  phoneInputSectionWrapper,
 };

@@ -4,13 +4,12 @@ const infoWindowBackground = require('./svgs/info-window.svg');
 
 const infoWindowStyle = {
   position: 'absolute',
-  right: -MARKER_WIDTH * 3.25,
-  bottom: MARKER_HOVER_HEIGHT - MARKER_HOVER_HEIGHT / 1.5,
+  right: -MARKER_WIDTH * 2.875,
+  bottom: MARKER_WIDTH * 0.875,
   width: '200px',
   height: '150px',
   zIndex: 1000,
   color: 'black',
-  padding: 15,
 };
 
 const infoText = {};
@@ -24,10 +23,11 @@ const infoContainer = {
   backgroundImage: `url(${infoWindowBackground})`,
   backgroundSize: '100%',
   minHeight: '125px',
-  padding: 10,
+  paddingLeft: 15,
+  paddingTop: 5,
 };
 
-const rsvpButton = {
+const plainButton = {
   background: 'none',
   alignSelf: 'left',
   color: 'black',
@@ -36,6 +36,7 @@ const rsvpButton = {
   border: 'none',
   margin: 0,
   padding: 0,
+  display: 'block',
 };
 
-export { infoWindowStyle, infoContainer, infoContent, infoText, rsvpButton };
+export { infoWindowStyle, infoContainer, infoContent, infoText, plainButton };
