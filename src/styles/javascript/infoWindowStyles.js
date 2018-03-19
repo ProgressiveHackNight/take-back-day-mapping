@@ -1,40 +1,42 @@
 import { MARKER_WIDTH, MARKER_HOVER_WIDTH, MARKER_HOVER_HEIGHT } from './mapMarkerStyles';
 
+const infoWindowBackground = require('./svgs/info-window.svg');
+
 const infoWindowStyle = {
   position: 'absolute',
-  right: -MARKER_WIDTH + MARKER_HOVER_WIDTH,
-  bottom: -MARKER_WIDTH + MARKER_HOVER_HEIGHT * 1.2,
-  width: 160,
-  height: 60,
-  backgroundColor: '#4E83F8',
+  right: -MARKER_WIDTH * 2.875,
+  bottom: MARKER_WIDTH * 0.875,
+  width: '200px',
+  height: '150px',
   zIndex: 1000,
-  color: '#fff',
-  borderRadius: 4,
-  boxShadow: '5px 5px 5px rgba(0,0,0,0.3)',
-  padding: 2,
+  color: 'black',
 };
 
-const infoText = {
-  margin: 8,
-};
+const infoText = {};
 
-const infoContent = {
-  flex: '1',
-};
+const infoContent = {};
 
 const infoContainer = {
   display: 'flex',
+  flexDirection: 'column',
+  background: 'no-repeat',
+  backgroundImage: `url(${infoWindowBackground})`,
+  backgroundSize: '100%',
+  minHeight: '125px',
+  paddingLeft: 15,
+  paddingTop: 5,
 };
 
-const rsvpButton = {
-  height: 40,
-  width: 40,
-  alignSelf: 'center',
-  backgroundColor: '#fff',
-  color: '#4E83F8',
+const plainButton = {
+  background: 'none',
+  alignSelf: 'left',
+  color: 'black',
+  textDecoration: 'underline',
   fontWeight: 'bold',
-  borderRadius: 4,
-  marginRight: 4,
+  border: 'none',
+  margin: 0,
+  padding: 0,
+  display: 'block',
 };
 
-export { infoWindowStyle, infoContainer, infoContent, infoText, rsvpButton };
+export { infoWindowStyle, infoContainer, infoContent, infoText, plainButton };

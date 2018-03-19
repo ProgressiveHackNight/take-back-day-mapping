@@ -4,19 +4,20 @@ import {
   infoContainer,
   infoContent,
   infoText,
-  rsvpButton,
+  plainButton,
 } from '../styles/javascript/infoWindowStyles';
 
-const InfoWindow = ({ description, address, onClick }) => {
+const InfoWindow = ({ location, onClick }) => {
   return (
     <div style={infoWindowStyle}>
       <div style={infoContainer}>
         <div style={infoContent}>
-          <p style={infoText}>{description}</p>
-          <p style={infoText}>{address}</p>
+          <p style={infoText}>{location.name}</p>
+          <p style={infoText}>{location.location}</p>
         </div>
-        <button style={rsvpButton} onClick={onClick}>
-          Rsvp
+
+        <button style={plainButton} onClick={onClick}>
+          get reminder
         </button>
       </div>
     </div>

@@ -29,13 +29,7 @@ class MapMarker extends Component {
 
   showInfoWindow = () => {
     if (this.props.selected) {
-      return (
-        <InfoWindowContainer
-          style={{ width: 80 }}
-          address={this.props.location.location}
-          description={this.props.location.name}
-        />
-      );
+      return <InfoWindowContainer style={{ width: 80 }} location={this.props.location} />;
     }
     return '';
   };
