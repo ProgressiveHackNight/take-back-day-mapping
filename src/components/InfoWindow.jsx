@@ -5,14 +5,21 @@ import {
   infoContent,
   infoText,
   plainButton,
+  infoHeader,
+  infoCloseButton,
 } from '../styles/javascript/infoWindowStyles';
 
-const InfoWindow = ({ location, onClick }) => {
+const InfoWindow = ({ location, onClick, onCloseClick }) => {
   return (
     <div style={infoWindowStyle}>
       <div style={infoContainer}>
         <div style={infoContent}>
-          <p style={infoText}>{location.name}</p>
+          <div style={infoHeader}>
+            <h4 style={infoText}>{location.name}</h4>
+            <span style={infoCloseButton} onClick={onCloseClick}>
+              &times;
+            </span>
+          </div>
           <p style={infoText}>{location.location}</p>
         </div>
 

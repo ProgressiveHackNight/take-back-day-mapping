@@ -12,7 +12,20 @@ const infoWindowStyle = {
   color: 'black',
 };
 
-const infoText = {};
+const infoHeader = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+};
+
+const infoCloseButton = {
+  fontSize: 20,
+  paddingTop: 5,
+};
+
+const infoText = {
+  marginBottom: 5,
+};
 
 const infoContent = {};
 
@@ -24,6 +37,7 @@ const infoContainer = {
   backgroundSize: '100%',
   minHeight: '125px',
   paddingLeft: 15,
+  paddingRight: 15,
   paddingTop: 5,
 };
 
@@ -39,4 +53,4 @@ const plainButton = {
   display: 'block',
 };
 
-export { infoWindowStyle, infoContainer, infoContent, infoText, plainButton };
+export { infoWindowStyle, infoContainer, infoContent, infoText, plainButton, infoHeader, infoCloseButton };

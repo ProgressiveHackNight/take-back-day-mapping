@@ -1,16 +1,16 @@
 import types from '../actionTypes';
 
-const handleRsvpClick = location => dispatch => {
+const selectLocation = location => dispatch => {
   return dispatch({
     type: types.UPDATE_SELECTED_LOCATION,
     payload: location,
   });
 };
 
-const handleModalClose = () => dispatch => {
+const unselectLocation = () => dispatch => {
   return dispatch({
     type: types.UPDATE_SELECTED_LOCATION,
     payload: null,
   });
 };
-export { handleRsvpClick, handleModalClose };
+export { selectLocation, unselectLocation };
