@@ -40,6 +40,12 @@ class App extends Component {
     }
   };
 
+  infoCloseClick = () => {
+    this.setState(state => ({
+      selectedLocationId: null,
+    }));
+  };
+
   render() {
     return (
       <div className="container">
@@ -49,6 +55,7 @@ class App extends Component {
             selectedMarker={this.state.selectedLocationId}
             onLocationSelect={this.handleLocationSelect}
             center={this.state.mapCenter}
+            onInfoClose={this.infoCloseClick}
           />
           <div style={listSection}>
             <SearchSection />

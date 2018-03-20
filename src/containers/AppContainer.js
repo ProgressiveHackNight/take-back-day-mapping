@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 
 import App from '../components/App';
-import { handleModalClose } from '../actions/handleRsvpClick';
+import { unselectLocation } from '../actions/updateLocationSelect';
 
 const mapStateToProps = state => ({
   selectedLocation: state.selectedLocation,
 });
 
 const mapDispatchToProps = dispatch => ({
-  onCloseClick: () => dispatch(handleModalClose()),
+  onCloseClick: () => dispatch(unselectLocation()),
 });
 
 const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
