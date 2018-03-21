@@ -1,7 +1,8 @@
 import types from '../actionTypes';
 import firebase from '../firebase';
 
-const database = firebase.database().ref('reminders');
+// check if reminder request for number and location already exists before adding again
+const database = firebase.database().ref('phoneReminders');
 
 const handlePhoneInput = input => (dispatch, getState) => {
   const reminder = {
@@ -10,11 +11,6 @@ const handlePhoneInput = input => (dispatch, getState) => {
   };
 
   database.push(reminder);
-
-  return dispatch({
-    type: types.UPDATE_PHONE_INPUT,
-    payload: input,
-  });
 };
 
 export default handlePhoneInput;

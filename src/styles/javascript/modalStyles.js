@@ -1,3 +1,5 @@
+const checkIcon = require('./svgs/check.svg');
+
 const modal = {
   display: 'block',
   position: 'fixed',
@@ -91,6 +93,20 @@ const plainButton = {
   display: 'block',
 };
 
+const successIcon = {
+  backgroundImage: `url(${checkIcon})`,
+  backgroundPosition: 'center center no-repeat',
+  backgroundSize: 'cover',
+  height: 100,
+  width: 100,
+}
+
+const successSection = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+}
+
 export {
   modal,
   modalWrapper,
@@ -102,4 +118,6 @@ export {
   modalAddressStyles,
   reminderText,
   phoneInputSectionWrapper,
+  successIcon,
+  successSection,
 };

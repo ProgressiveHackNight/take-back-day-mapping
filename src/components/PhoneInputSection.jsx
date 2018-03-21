@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
+import shouldPureComponentUpdate from 'react-pure-render/function';
 
-import { modalButtonStyle, plainButton, phoneInputSectionWrapper } from '../styles/javascript/modalStyles';
+import { modalButtonStyle, plainButton, phoneInputSectionWrapper, successIcon, successSection } from '../styles/javascript/modalStyles';
+
+import ReminderSuccess from './ReminderSuccess.jsx';
 
 class PhoneInputSection extends Component {
+  shouldComponentUpdate = shouldPureComponentUpdate;
+
   constructor(props) {
     super(props);
 
     this.state = {
       phone: '',
       error: null,
+      success: null,
     };
   }
 
@@ -34,43 +40,40 @@ class PhoneInputSection extends Component {
     if (this.state.phone.length < 10) {
       this.setState({
         error: 'Please enter a 10-digit phone number (with area code)',
+        success: null,
       });
     } else if (this.state.phone.length === 10) {
       this.setState({
         error: null,
+        success: true,
       });
       this.props.onPhoneButtonClick(this.state.phone);
     }
   };
 
   render() {
-    const stlye = this.props.visible ? phoneInputSectionWrapper : { display: 'none' };
-    const noteStyle = {
-      textAlign: 'center',
-      color: 'gray',
-      fontSize: 14,
-      margin: 25,
-    };
+    const inputSectionStyle = this.props.visible && !this.state.success ? phoneInputSectionWrapper : { display: 'none' };
 
     return (
-      <div style={stlye}>
-        <TextField
-          id="phone-field"
-          type="text"
-          name="phone-input"
-          value={this.state.phone}
-          onChange={this.handleChange.bind(this)}
-          underlineFocusStyle={{ borderColor: '#69C109' }}
-          errorText={this.state.error}
-          floatingLabelText="enter phone number"
-          floatingLabelFocusStyle={{ color: '#b1b1b1' }}
-        />
-        <p style={noteStyle}>
-          We'll send you a text reminder on Take Back Day with this address and drop-off instructions
-        </p>
-        <button style={modalButtonStyle} onClick={this.handleClick}>
-          submit
-        </button>
+      <div>
+        <div style={inputSectionStyle}>
+          <TextField
+            id="phone-field"
+            type="text"
+            name="phone-input"
+            onChange={this.handleChange.bind(this)}
+            underlineFocusStyle={{ borderColor: 'black' }}
+            errorText={this.state.error}
+            floatingLabelText="enter phone number"
+            floatingLabelFocusStyle={{ color: '#b1b1b1' }}
+          />
+
+          <button style={modalButtonStyle} onClick={this.handleClick}>
+            submit
+          </button>
+        </div>
+
+        <ReminderSuccess visible={this.props.visible && this.state.success} type="text"/>
       </div>
     );
   }
