@@ -7,10 +7,7 @@ import ModalContainer from '../containers/ModalContainer';
 
 import { listSection } from '../styles/javascript/listStyles';
 
-import mockData from '../mockData';
-
 const defaultState = {
-  locations: [],
   selectedLocationId: null,
   mapCenter: { lat: 40.744679, lng: -73.948542 },
 };
@@ -19,9 +16,7 @@ class App extends Component {
   state = defaultState;
 
   componentDidMount() {
-    this.setState(state => ({
-      locations: mockData,
-    }));
+    this.props.fetchLocations();
   }
 
   handleLocationSelect = selectedId => {
@@ -51,7 +46,7 @@ class App extends Component {
       <div className="container">
         <div className="wrapper">
           <Map
-            locations={this.state.locations}
+            locations={this.props.locations}j
             selectedMarker={this.state.selectedLocationId}
             onLocationSelect={this.handleLocationSelect}
             center={this.state.mapCenter}
@@ -59,7 +54,7 @@ class App extends Component {
           />
           <div style={listSection}>
             <SearchSection />
-            <EventsListContainer events={mockData} onLocationSelect={this.handleListSelect} />
+            <EventsListContainer events={this.props.locations} onLocationSelect={this.handleListSelect} />
           </div>
         </div>
         <ModalContainer visible={this.props.selectedLocation} onCloseClick={this.props.onCloseClick} />

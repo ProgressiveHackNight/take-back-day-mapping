@@ -4,10 +4,10 @@ import thunk from 'redux-thunk';
 
 import initialGlobalState from './transformers/toGlobalState';
 
-export default function configureStore() {
+export default function configureStore(initialState = {}) {
   return createStore(
     rootReducer,
-    initialGlobalState({}),
+    initialGlobalState(initialState),
     compose(
       applyMiddleware(thunk),
       window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
