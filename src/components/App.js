@@ -46,7 +46,7 @@ class App extends Component {
       <div className="container">
         <div className="wrapper">
           <Map
-            locations={this.props.locations}
+            locations={this.props.locations}j
             selectedMarker={this.state.selectedLocationId}
             onLocationSelect={this.handleLocationSelect}
             center={this.state.mapCenter}

@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 
 import initialGlobalState from './transformers/toGlobalState';
 
-export default function configureStore(initialState) {
+export default function configureStore(initialState = {}) {
   return createStore(
     rootReducer,
     initialGlobalState(initialState),

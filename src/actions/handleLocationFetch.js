@@ -11,9 +11,3 @@ const handleLocationFetch = () => dispatch => {
     }
 )};
 export { handleLocationFetch };
-
-
-// get locations from store
-// pass through app rather than importing
-// fetch locations, thunk action
-// delay mount until locations are fetched

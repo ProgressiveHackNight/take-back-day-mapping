@@ -1,7 +1,5 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { mount } from 'enzyme';
-import configureStore from '../../configureStore';
+import { mountWithWrappers } from '../../testHelpers';
 import App from '../App';
 import Map from '../Map';
 
@@ -14,10 +12,8 @@ describe('App', () => {
   beforeEach(() => {
     fetchStub = jest.fn();
 
-    wrapper = mount(
-      <Provider store={configureStore()}>
-        <App locations={[]} fetchLocations={fetchStub} />
-      </Provider>,
+    wrapper = mountWithWrappers(
+      <App locations={[]} fetchLocations={fetchStub} />,
     );
   });
 
