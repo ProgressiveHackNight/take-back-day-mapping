@@ -1,6 +1,8 @@
 import mockData from '../mockData';
 
-const jsonEndpoint = 'https://takebackday.infoloom.com/media/output.json';
+// Actual host url is set in redirects file to avoid CORS
+// Will not work locally, so endpoint will just return default data from file
+const jsonEndpoint = '/api/media/output.json';
 
 export const fetchLocations = () => (
  fetch(jsonEndpoint)

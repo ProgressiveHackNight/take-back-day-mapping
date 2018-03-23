@@ -1,0 +1,3 @@
+# /_redirects
+
+/api/*  https://takebackday.infoloom.com/:splat
