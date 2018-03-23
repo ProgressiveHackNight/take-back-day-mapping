@@ -15,8 +15,8 @@ class MapMarker extends Component {
     hover: PropTypes.bool,
     location: PropTypes.object,
     selected: PropTypes.bool,
-    lat: PropTypes.string,
-    lng: PropTypes.string,
+    lat: PropTypes.number,
+    lng: PropTypes.number,
   };
 
   static defaultProps = {};
