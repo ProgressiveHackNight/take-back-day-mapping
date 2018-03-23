@@ -1,15 +1,20 @@
 import { connect } from 'react-redux';
 
 import Modal from '../components/Modal.jsx';
+import resetReminders from '../actions/resetReminders';
 
-const getAddress = state => {
-  return state.selectedLocation ? state.selectedLocation.location : null;
+const getLocation = state => {
+  return state.selectedLocation ? state.selectedLocation : { location: '' };
 };
 
 const mapStateToProps = state => ({
-  address: getAddress(state),
+  location: getLocation(state),
 });
 
-const ModalContainer = connect(mapStateToProps)(Modal);
+const mapDispatchToProps = dispatch => ({
+  resetModal: () => dispatch(resetReminders())
+})
+
+const ModalContainer = connect(mapStateToProps, mapDispatchToProps)(Modal);
 
 export default ModalContainer;
