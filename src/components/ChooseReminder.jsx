@@ -2,7 +2,7 @@ import React from 'react';
 
 import { modalButtonsContainer, modalButtonStyle, reminderText } from '../styles/javascript/modalStyles';
 
-const ReminderTypeSection = ({ sectionStyle, textButtonClick, emailButtonClick }) => {
+const ChooseReminder = ({ sectionStyle, textButtonClick, emailButtonClick }) => {
   return (
     <div style={sectionStyle}>
       <p style={reminderText}>What kind of reminder would you like to recieve?</p>
@@ -18,4 +18,4 @@ const ReminderTypeSection = ({ sectionStyle, textButtonClick, emailButtonClick }
   );
 };
 
-export default ReminderTypeSection;
+export default ChooseReminder;

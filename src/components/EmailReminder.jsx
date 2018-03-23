@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 
-import { modalButtonStyle, plainButton, phoneInputSectionWrapper } from '../styles/javascript/modalStyles';
+import { modalButtonStyle, plainButton, TextReminderWrapper } from '../styles/javascript/modalStyles';
 
-class PhoneInputSection extends Component {
+class TextReminder extends Component {
   constructor(props) {
     super(props);
 
@@ -43,7 +43,7 @@ class PhoneInputSection extends Component {
   };
 
   render() {
-    const stlye = this.props.visible ? phoneInputSectionWrapper : { display: 'none' };
+    const stlye = this.props.visible ? TextReminderWrapper : { display: 'none' };
 
     const noteStyle = {
       textAlign: 'center',
@@ -76,4 +76,4 @@ class PhoneInputSection extends Component {
   }
 }
 
-export default PhoneInputSection;
+export default TextReminder;

@@ -76,7 +76,7 @@ const reminderText = {
   fontSize: '16px',
 };
 
-const phoneInputSectionWrapper = {
+const TextReminderWrapper = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -117,7 +117,7 @@ export {
   modalButtonStyle,
   modalAddressStyles,
   reminderText,
-  phoneInputSectionWrapper,
+  TextReminderWrapper,
   successIcon,
   successSection,
 };

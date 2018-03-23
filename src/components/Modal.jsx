@@ -10,9 +10,9 @@ import {
 
 import { DARK_GRAY } from '../styles/javascript/colors';
 
-import PhoneInputSectionContainer from '../containers/PhoneInputSectionContainer';
-import EmailInputSectionContainer from '../containers/EmailInputSectionContainer';
-import ReminderTypeSection from './ReminderTypeSection';
+import TextReminderContainer from '../containers/TextReminderContainer';
+import EmailReminderContainer from '../containers/EmailReminderContainer';
+import ChooseReminder from './ChooseReminder';
 import displayReminderType from '../helpers/displayReminderType';
 
 class Modal extends Component {
@@ -78,15 +78,15 @@ class Modal extends Component {
 
           <p style={{ color: DARK_GRAY }}>Get a {displayReminderType(this.state)} reminder to drop off at this location:</p>
 
-          <h4 style={modalAddressStyles}>{this.props.address}</h4>
+          <h4 style={modalAddressStyles}>{this.props.location.location}</h4>
 
-          <ReminderTypeSection
+          <ChooseReminder
             sectionStyle={reminderTypeStyle}
             textButtonClick={this.handlePhoneButtonClick}
             emailButtonClick={this.handleEmailButtonClick}
           />
-          <PhoneInputSectionContainer visible={phoneInputVisible} />
-          <EmailInputSectionContainer visible={emailInputVisible} />
+          <TextReminderContainer location={this.props.location} visible={phoneInputVisible} />
+          <EmailReminderContainer location={this.props.location} visible={emailInputVisible} />
           <button style={backButtonStyle} onClick={this.handleBackButtonClick}>
             go back
           </button>

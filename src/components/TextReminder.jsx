@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 
-import { modalButtonStyle, plainButton, phoneInputSectionWrapper, successIcon, successSection } from '../styles/javascript/modalStyles';
+import { modalButtonStyle, plainButton, TextReminderWrapper, successIcon, successSection } from '../styles/javascript/modalStyles';
 
 import ReminderSuccess from './ReminderSuccess.jsx';
 
-class PhoneInputSection extends Component {
+class TextReminder extends Component {
   shouldComponentUpdate = shouldPureComponentUpdate;
 
   constructor(props) {
@@ -52,7 +52,7 @@ class PhoneInputSection extends Component {
   };
 
   render() {
-    const inputSectionStyle = this.props.visible && !this.state.success ? phoneInputSectionWrapper : { display: 'none' };
+    const inputSectionStyle = this.props.visible && !this.state.success ? TextReminderWrapper : { display: 'none' };
 
     return (
       <div>
@@ -79,4 +79,4 @@ class PhoneInputSection extends Component {
   }
 }
 
-export default PhoneInputSection;
+export default TextReminder;

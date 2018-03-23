@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 
-import EmailInputSection from '../components/EmailInputSection.jsx';
+import EmailReminder from '../components/EmailReminder.jsx';
 import handleEmailInput from '../actions/handleEmailInput';
 
 const mapDispatchToProps = dispatch => ({
   onPhoneButtonClick: input => dispatch(handleEmailInput(input)),
 });
 
-const EmailInputSectionContainer = connect(null, mapDispatchToProps)(EmailInputSection);
+const EmailReminderContainer = connect(null, mapDispatchToProps)(EmailReminder);
 
-export default EmailInputSectionContainer;
+export default EmailReminderContainer;
