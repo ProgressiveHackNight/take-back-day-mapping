@@ -4,6 +4,8 @@ import TextField from 'material-ui/TextField';
 
 import { modalButtonStyle, plainButton, TextReminderWrapper } from '../styles/javascript/modalStyles';
 
+import ReminderSuccess from './ReminderSuccess.jsx';
+
 class TextReminder extends Component {
   constructor(props) {
     super(props);
@@ -38,12 +40,12 @@ class TextReminder extends Component {
       this.setState({
         error: null,
       });
-      this.props.onPhoneButtonClick(this.state.email);
+      this.props.onClick(this.state.email);
     }
   };
 
   render() {
-    const stlye = this.props.visible ? TextReminderWrapper : { display: 'none' };
+    const stlye = this.props.visible && !this.props.isCompleted ? TextReminderWrapper : { display: 'none' };
 
     const noteStyle = {
       textAlign: 'center',
@@ -54,23 +56,26 @@ class TextReminder extends Component {
     };
 
     return (
-      <div style={stlye}>
-        <TextField
-          id="email-field"
-          type="text"
-          name="email-input"
-          onChange={this.handleChange.bind(this)}
-          underlineFocusStyle={{ borderColor: 'black' }}
-          errorText={this.state.error}
-          floatingLabelText="enter your email address"
-          floatingLabelFocusStyle={{ color: '#b1b1b1' }}
-        />
-        <p style={noteStyle}>
-          We'll send you an email reminder prior to Take Back Day with this address and drop-off instructions
-        </p>
-        <button style={modalButtonStyle} onClick={this.handleClick}>
-          submit
-        </button>
+      <div>
+        <div style={stlye}>
+          <TextField
+            id="email-field"
+            type="text"
+            name="email-input"
+            onChange={this.handleChange.bind(this)}
+            underlineFocusStyle={{ borderColor: 'black' }}
+            errorText={this.state.error}
+            floatingLabelText="enter your email address"
+            floatingLabelFocusStyle={{ color: '#b1b1b1' }}
+          />
+
+          <button style={modalButtonStyle} onClick={this.handleClick}>
+            submit
+          </button>
+        </div>
+
+        <ReminderSuccess visible={this.props.visible && this.props.isCompleted} type="text"/>
+
       </div>
     );
   }

@@ -1,15 +1,20 @@
 import types from '../actionTypes';
 
-const reminders = (state = { phone: null, email: null }, { type, payload }) => {
+const reminders = (state = { text: null, email: null }, { type, payload }) => {
   switch (type) {
-    case types.ADD_PHONE_REMINDER:
+    case types.ADD_TEXT_REMINDER:
       return {
-        phone: payload,
+        text: payload,
         email: state.email,
       };
     case types.ADD_EMAIL_REMINDER:
       return {
-        phone: state.phone,
+        text: state.phone,
+        email: payload,
+      };
+    case types.RESET_REMINDERS:
+      return {
+        text: payload,
         email: payload,
       };
     default:

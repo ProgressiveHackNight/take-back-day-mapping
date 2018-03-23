@@ -11,6 +11,11 @@ const handlePhoneInput = input => (dispatch, getState) => {
   };
 
   database.push(reminder);
+
+  return dispatch({
+    type: types.ADD_TEXT_REMINDER,
+    payload: true,
+  });
 };
 
 export default handlePhoneInput;

@@ -10,6 +10,11 @@ const handleEmailInput = input => (dispatch, getState) => {
   };
 
   database.push(reminder);
+
+  return dispatch({
+    type: types.ADD_EMAIL_REMINDER,
+    payload: true,
+  });
 };
 
 export default handleEmailInput;

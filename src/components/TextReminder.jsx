@@ -16,7 +16,6 @@ class TextReminder extends Component {
     this.state = {
       phone: '',
       error: null,
-      success: null,
     };
   }
 
@@ -36,23 +35,21 @@ class TextReminder extends Component {
     }
   };
 
-  handleClick = () => {
+  handleSubmit = () => {
     if (this.state.phone.length < 10) {
       this.setState({
         error: 'Please enter a 10-digit phone number (with area code)',
-        success: null,
       });
     } else if (this.state.phone.length === 10) {
       this.setState({
         error: null,
-        success: true,
       });
       this.props.onPhoneButtonClick(this.state.phone);
     }
   };
 
   render() {
-    const inputSectionStyle = this.props.visible && !this.state.success ? TextReminderWrapper : { display: 'none' };
+    const inputSectionStyle = this.props.visible && !this.props.isCompleted ? TextReminderWrapper : { display: 'none' };
 
     return (
       <div>
@@ -68,12 +65,12 @@ class TextReminder extends Component {
             floatingLabelFocusStyle={{ color: '#b1b1b1' }}
           />
 
-          <button style={modalButtonStyle} onClick={this.handleClick}>
+          <button style={modalButtonStyle} onClick={this.handleSubmit}>
             submit
           </button>
         </div>
 
-        <ReminderSuccess visible={this.props.visible && this.state.success} type="text"/>
+        <ReminderSuccess visible={this.props.visible && this.props.isCompleted} type="text"/>
       </div>
     );
   }

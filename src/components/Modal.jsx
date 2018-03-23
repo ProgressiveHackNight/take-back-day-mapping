@@ -71,6 +71,7 @@ class Modal extends Component {
             onClick={() => {
               this.props.onCloseClick();
               this.handleCloseClick();
+              this.props.resetModal();
             }}
           >
             <span style={closeButton}>&times;</span>

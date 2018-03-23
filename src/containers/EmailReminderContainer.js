@@ -3,10 +3,14 @@ import { connect } from 'react-redux';
 import EmailReminder from '../components/EmailReminder.jsx';
 import handleEmailInput from '../actions/handleEmailInput';
 
+const mapStateToProps = state => ({
+  isCompleted: state.reminders.email,
+})
+
 const mapDispatchToProps = dispatch => ({
-  onPhoneButtonClick: input => dispatch(handleEmailInput(input)),
+  onClick: input => dispatch(handleEmailInput(input)),
 });
 
-const EmailReminderContainer = connect(null, mapDispatchToProps)(EmailReminder);
+const EmailReminderContainer = connect(mapStateToProps, mapDispatchToProps)(EmailReminder);
 
 export default EmailReminderContainer;
