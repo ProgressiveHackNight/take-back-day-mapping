@@ -26,7 +26,7 @@ class App extends Component {
   };
 
   handleListSelect = selectedId => {
-    const selectedLoc = this.state.locations.find(location => location.id == selectedId);
+    const selectedLoc = this.props.locations.find(location => location.id == selectedId);
     if (selectedLoc) {
       this.setState(state => ({
         mapCenter: { lat: selectedLoc.lat, lng: selectedLoc.lon },

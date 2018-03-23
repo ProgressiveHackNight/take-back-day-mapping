@@ -15,7 +15,7 @@ export const toLocations = (apiLocations) => (
     name: location.name,
     type: location.type,
     location: location.address,
-    lat: location.latitude,
-    lon: location.longitude,
+    lat: parseFloat(location.latitude),
+    lon: parseFloat(location.longitude),
   }))
 );
