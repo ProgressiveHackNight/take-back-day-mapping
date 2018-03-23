@@ -10,9 +10,7 @@ const noteStyle = {
 };
 
 const ReminderSuccess = ({visible, type}) => {
-  console.log('visible', visible)
   if(visible) {
-    console.log('inside visible')
     return (
       <div style={successSection}>
         <div style={successIcon}></div>
