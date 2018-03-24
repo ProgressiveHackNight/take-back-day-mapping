@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import TextReminder from '../components/TextReminder.jsx';
+import TextReminder from '../components/TextReminder';
 import handlePhoneInput from '../actions/handlePhoneInput';
 
 const mapStateToProps = state => ({

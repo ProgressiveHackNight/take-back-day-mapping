@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField';
 
 import { modalButtonStyle, plainButton, TextReminderWrapper } from '../styles/javascript/modalStyles';
 
-import ReminderSuccess from './ReminderSuccess.jsx';
+import ReminderSuccess from './ReminderSuccess';
 
 class TextReminder extends Component {
   constructor(props) {
