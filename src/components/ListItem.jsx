@@ -3,7 +3,7 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 import PropTypes from 'prop-types';
 import Paper from 'material-ui/Paper';
 
-import { listItemStyle, listItemHoverStyle, listButtonStyle } from '../styles/javascript/listStyles';
+import { listButtonStyle } from '../styles/javascript/listStyles';
 
 const locationTitleStyle = {
   color: '#4B4B4B',

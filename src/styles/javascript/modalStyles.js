@@ -7,22 +7,11 @@ const modal = {
   left: '0',
   top: '0',
   width: '100%',
-  height: '100%',
   overflow: 'auto',
   backgroundColor: 'rgb(0,0,0)',
   backgroundColor: 'rgba(0,0,0,0.4)',
-};
-
-const modalWrapper = {
-  backgroundColor: '#fefefe',
-  margin: '15% auto',
-  border: '1px solid #888',
-  borderRadius: '8px',
-  width: '400px',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  paddingBottom: '15px',
+  marginTop: 20,
+  height: '100%',
 };
 
 const closeButtonWrapper = {
@@ -109,7 +98,6 @@ const successSection = {
 
 export {
   modal,
-  modalWrapper,
   closeButton,
   closeButtonWrapper,
   plainButton,

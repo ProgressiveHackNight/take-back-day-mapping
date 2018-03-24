@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   modal,
-  modalWrapper,
   closeButton,
   closeButtonWrapper,
   modalAddressStyles,
@@ -65,7 +64,7 @@ class Modal extends Component {
 
     return (
       <div style={modalStyle}>
-        <div style={modalWrapper}>
+        <div className="modal-wrapper">
           <div
             style={closeButtonWrapper}
             onClick={() => {

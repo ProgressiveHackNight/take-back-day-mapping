@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import EventsList from '../components/EventsList.jsx';
+import LocationsList from '../components/LocationsList';
 
 const showEvents = state => {
   if (state.searchInput) {
@@ -17,6 +17,6 @@ const mapStateToProps = state => ({
   events: showEvents(state),
 });
 
-const EventsListContainer = connect(mapStateToProps)(EventsList);
+const LocationsListContainer = connect(mapStateToProps)(LocationsList);
 
-export default EventsListContainer;
+export default LocationsListContainer;

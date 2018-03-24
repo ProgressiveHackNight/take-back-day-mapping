@@ -39,6 +39,8 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
     };
 
     render() {
+      const mapClassName = this.props.hidden ? 'google-map-mobile-hidden' : 'google-map';
+
       const generateMarkers = mapLocations => {
         return mapLocations.map((location, index) => {
           return (
@@ -55,7 +57,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
       };
 
       return (
-        <div className="google-map">
+        <div className={mapClassName}>
           <GoogleMapReact
             center={this.props.center}
             defaultZoom={this.props.zoom}
