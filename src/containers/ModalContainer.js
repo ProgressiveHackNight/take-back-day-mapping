@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-import Modal from '../components/Modal';
 import resetReminders from '../actions/resetReminders';
+import Modal from '../components/Modal';
 
 const getLocation = state => {
   return state.selectedLocation ? state.selectedLocation : { location: '' };
