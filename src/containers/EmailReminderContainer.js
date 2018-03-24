@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import EmailReminder from '../components/EmailReminder.jsx';
+import EmailReminder from '../components/EmailReminder';
 import handleEmailInput from '../actions/handleEmailInput';
 
 const mapStateToProps = state => ({

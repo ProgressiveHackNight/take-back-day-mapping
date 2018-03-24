@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import SearchField from '../components/SearchField.jsx';
+import SearchField from '../components/SearchField';
 
 import handleSearchInput from '../actions/handleSearchInput';
 

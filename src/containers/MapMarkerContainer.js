@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import MapMarker from '../components/MapMarker.jsx';
+import MapMarker from '../components/MapMarker';
 import { beginLocationHover, endLocationHover } from '../actions/handleHover';
 import isHoveredLocation from '../selectors/isHoveredLocation';
 

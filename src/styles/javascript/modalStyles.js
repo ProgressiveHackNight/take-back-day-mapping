@@ -10,7 +10,6 @@ const modal = {
   overflow: 'auto',
   backgroundColor: 'rgb(0,0,0)',
   backgroundColor: 'rgba(0,0,0,0.4)',
-  marginTop: 20,
   height: '100%',
 };
 
