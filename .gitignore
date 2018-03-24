@@ -36,4 +36,4 @@ build/
 .env.production.local
 
 # Exported code - only should be addded on publish branch
-lib/
+# lib/
