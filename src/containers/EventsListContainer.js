@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import EventsList from '../components/EventsList.jsx';
+import EventsList from '../components/EventsList';
 
 const showEvents = state => {
   if (state.searchInput) {

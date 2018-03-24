@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/css/App.css';
-import Map from './Map.jsx';
+import Map from './Map';
 import EventsListContainer from '../containers/EventsListContainer';
-import SearchSection from './SearchSection.jsx';
+import SearchSection from './SearchSection';
 import ModalContainer from '../containers/ModalContainer';
 
 import { listSection } from '../styles/javascript/listStyles';

@@ -5,7 +5,7 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 
 import { modalButtonStyle, plainButton, TextReminderWrapper, successIcon, successSection } from '../styles/javascript/modalStyles';
 
-import ReminderSuccess from './ReminderSuccess.jsx';
+import ReminderSuccess from './ReminderSuccess';
 
 class TextReminder extends Component {
   shouldComponentUpdate = shouldPureComponentUpdate;

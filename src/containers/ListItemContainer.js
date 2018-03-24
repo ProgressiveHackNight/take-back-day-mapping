@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ListItem from '../components/ListItem.jsx';
+import ListItem from '../components/ListItem';
 import { selectLocation } from '../actions/updateLocationSelect';
 import { beginLocationHover, endLocationHover } from '../actions/handleHover';
 import isHoveredLocation from '../selectors/isHoveredLocation';

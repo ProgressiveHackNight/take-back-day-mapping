@@ -34,3 +34,6 @@ build/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Exported code - only should be addded on publish branch
+lib/

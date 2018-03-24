@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import InfoWindow from '../components/InfoWindow.jsx';
+import InfoWindow from '../components/InfoWindow';
 import { selectLocation } from '../actions/updateLocationSelect';
 import { endLocationHover } from '../actions/handleHover';
 
