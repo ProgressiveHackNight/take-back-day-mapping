@@ -31,6 +31,18 @@
 * If tests get an error that looks like `Error: Error watching file for changes: EMFILE` run `brew install watchman`
 * If the app won't compile, and you get an error in compose about not being able to run apply of undefined, try installing react dev tools in chrome
 
+## Updating the Version used in the Microsite
+* This map is used in the microsite, which is its own app (https://github.com/cgalbiati/take-back-day-microsite).
+* The microiste app imports the map and uses it as a react component by installing directly from git (https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json).
+* In order to be used as a library, this app must be built.
+ ### To update:
+ * In the publish branch in this directory:
+  * Rebase in the current develop branch `git rebase -i develop`
+  * Build the library `yarn export`
+  * Commit your changes and push to origin (still on the publish branch - don't push to develop)
+ * Find your most recent commit hash (either through git log or by looking on github)
+ * Follow instrcutions in the other repo to update the deplendency
+
 # Process
 * Tasks to do are kept in a trello board: https://trello.com/b/vvN1NJTB/take-back-map
 * If you take a task, move it to the 'In Development' collumn and assign it to yourself
