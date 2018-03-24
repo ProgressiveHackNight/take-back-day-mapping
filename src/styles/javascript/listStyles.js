@@ -1,5 +1,5 @@
 const listSection = {
-  paddingLeft: 40,
+  marginLeft: 20,
 };
 
 const listContainerStyle = {
@@ -7,6 +7,7 @@ const listContainerStyle = {
   display: 'flex',
   flexDirection: 'column',
   overflowY: 'auto',
+  overflowX: 'hidden',
 };
 
 const listStyle = {
@@ -15,6 +16,7 @@ const listStyle = {
   margin: 0,
   display: 'flex',
   flexDirection: 'column',
+  width: '98%',
 };
 
 const listItemStyle = {

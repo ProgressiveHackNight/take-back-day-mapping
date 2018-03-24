@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 import PropTypes from 'prop-types';
+import Paper from 'material-ui/Paper';
 
 import { listItemStyle, listItemHoverStyle, listButtonStyle } from '../styles/javascript/listStyles';
 
@@ -17,6 +18,24 @@ const locationAddressStyle = {
   fontFamily: 'Avenir',
 };
 
+const paperStyle = {
+  width: '100%',
+  textAlign: 'left',
+  display: 'inline-block',
+  overflow: 'auto',
+  borderRadius: 5,
+  marginTop: 10,
+  paddingLeft: 20,
+  paddingBottom: 20,
+  marginLeft: 5,
+  marginRight: 5,
+};
+
+const paperHoverStyle = {
+  ...paperStyle,
+  backgroundColor: '#EFEFEF',
+};
+
 class ListItem extends Component {
   static propTypes = {
     location: PropTypes.object,
@@ -25,14 +44,14 @@ class ListItem extends Component {
   };
 
   render() {
-    const style = this.props.hover ? listItemHoverStyle : listItemStyle;
+    const style = this.props.hover ? paperHoverStyle : paperStyle;
     return (
       <div
         onClick={() => this.props.onLocationSelect(this.props.location.id)}
         onMouseEnter={this.props.onHover}
         onMouseLeave={this.props.onHoverEnd}
       >
-        <li style={style}>
+        <Paper style={style} zDepth={1}>
           <div>
             <p style={locationTitleStyle}>{this.props.location.name}</p>
             <p style={locationAddressStyle}>{this.props.location.location}</p>
@@ -40,7 +59,7 @@ class ListItem extends Component {
           <button style={listButtonStyle} onClick={this.props.handleRsvpClick}>
             remind
           </button>
-        </li>
+        </Paper>
       </div>
     );
   }
