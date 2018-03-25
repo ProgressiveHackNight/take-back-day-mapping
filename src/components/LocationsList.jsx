@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ListItemContainer from '../containers/ListItemContainer';
-import { listContainerStyle, listStyle, listItemStyle } from '../styles/javascript/listStyles';
+import { listStyle, listItemStyle } from '../styles/javascript/listStyles';
 
 const generateListItems = (events, onLocationSelect) => {
   return events.map(event => {
@@ -9,12 +9,12 @@ const generateListItems = (events, onLocationSelect) => {
   });
 };
 
-const EventsList = ({ events, onLocationSelect }) => {
+const LocationsList = ({ events, onLocationSelect }) => {
   return (
-    <div style={listContainerStyle}>
-      <ul style={listStyle}>{generateListItems(events, onLocationSelect)}</ul>
+    <div className="list-container">
+      <ul className="locations-list" style={listStyle}>{generateListItems(events, onLocationSelect)}</ul>
     </div>
   );
 };
 
-export default EventsList;
+export default LocationsList;

@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 
+const inputStyle = {
+  width: '98%',
+  borderRadius: 60,
+  border: '1px solid #dedede',
+  lineHeight: 2.5,
+  paddingLeft: 20,
+  fontSize: 14,
+  letterSpacing: '0.05em',
+  marginBottom: 10,
+}
+
 const SearchField = ({ value, handleChange }) => {
   return (
-    <TextField
+    <input
+      style={inputStyle}
       id="phone-field"
       type="text"
       name="phone-input"
       value={value}
       onChange={handleChange}
-      underlineFocusStyle={{ borderColor: '#d6d6d6' }}
-      floatingLabelText="search by city, zip, or location name"
-      floatingLabelFocusStyle={{ color: '#4b4b4b' }}
+      placeholder="city, zip, or location name"
     />
   );
 };
