@@ -40,8 +40,8 @@
   * Rebase in the current develop branch `git rebase -i develop`
   * Build the library `yarn export`
   * Commit your changes and push to origin (still on the publish branch - don't push to develop)
- * Find your most recent commit hash (either through git log or by looking on github)
- * Follow instrcutions in the other repo to update the deplendency
+ * Find your most recent commit hash on the publish branch (either through git log or by looking on github ( https://github.com/ProgressiveHackNight/take-back-day-mapping/tree/publish)
+ * Follow instrcutions in the other repo to update the dependency on that app to point to your updated map version
 
 # Process
 * Tasks to do are kept in a trello board: https://trello.com/b/vvN1NJTB/take-back-map
