@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 
-import { modalButtonStyle, plainButton, TextReminderWrapper } from '../styles/javascript/modalStyles';
+import { modalReminderWrapper } from '../styles/javascript/modalStyles';
+import { ctaButton, plainButton } from '../styles/javascript/buttons';
 
 import ReminderSuccess from './ReminderSuccess';
 
@@ -45,7 +46,7 @@ class TextReminder extends Component {
   };
 
   render() {
-    const stlye = this.props.visible && !this.props.isCompleted ? TextReminderWrapper : { display: 'none' };
+    const stlye = this.props.visible && !this.props.isCompleted ? modalReminderWrapper : { display: 'none' };
 
     const noteStyle = {
       textAlign: 'center',
@@ -67,9 +68,10 @@ class TextReminder extends Component {
             errorText={this.state.error}
             floatingLabelText="enter your email address"
             floatingLabelFocusStyle={{ color: '#b1b1b1' }}
+            style={{marginBottom: 25}}
           />
 
-          <button style={modalButtonStyle} onClick={this.handleClick}>
+        <button style={ctaButton} onClick={this.handleClick}>
             submit
           </button>
         </div>

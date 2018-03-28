@@ -3,7 +3,7 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 import PropTypes from 'prop-types';
 import Paper from 'material-ui/Paper';
 
-import { listButtonStyle } from '../styles/javascript/listStyles';
+import { ctaButton } from '../styles/javascript/buttons';
 
 const locationTitleStyle = {
   color: '#4B4B4B',
@@ -56,8 +56,8 @@ class ListItem extends Component {
             <p style={locationTitleStyle}>{this.props.location.name}</p>
             <p style={locationAddressStyle}>{this.props.location.location}</p>
           </div>
-          <button style={listButtonStyle} onClick={this.props.handleRsvpClick}>
-            remind
+          <button style={ctaButton} onClick={this.props.handleRsvpClick}>
+            get reminder
           </button>
         </Paper>
       </div>

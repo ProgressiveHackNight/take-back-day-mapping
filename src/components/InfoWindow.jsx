@@ -4,10 +4,11 @@ import {
   infoContainer,
   infoContent,
   infoText,
-  plainButton,
   infoHeader,
   infoCloseButton,
 } from '../styles/javascript/infoWindowStyles';
+
+import { plainButton } from '../styles/javascript/buttons';
 
 const InfoWindow = ({ location, onClick, onCloseClick }) => {
   return (
