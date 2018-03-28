@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
-import shouldPureComponentUpdate from 'react-pure-render/function';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import TextField from "material-ui/TextField";
+import InputMask from "react-input-mask";
+import shouldPureComponentUpdate from "react-pure-render/function";
 
-import { modalReminderWrapper, successIcon, successSection } from '../styles/javascript/modalStyles';
-import { ctaButton, plainButton } from '../styles/javascript/buttons';
+import {
+  modalReminderWrapper,
+  successIcon,
+  successSection,
+} from "../styles/javascript/modalStyles";
+import { ctaButton, plainButton } from "../styles/javascript/buttons";
 
-
-import ReminderSuccess from './ReminderSuccess';
+import ReminderSuccess from "./ReminderSuccess";
 
 class TextReminder extends Component {
   shouldComponentUpdate = shouldPureComponentUpdate;
@@ -16,7 +20,7 @@ class TextReminder extends Component {
     super(props);
 
     this.state = {
-      phone: '',
+      phone: "",
       error: null,
     };
   }
@@ -28,7 +32,7 @@ class TextReminder extends Component {
 
   handleChange = event => {
     const inputValue = event.target.value;
-    const numberWithoutFormatting = inputValue.replace(/\D/g,'');
+    const numberWithoutFormatting = inputValue.replace(/\D/g, "");
 
     if (this.validateInput(numberWithoutFormatting)) {
       this.setState({
@@ -41,7 +45,7 @@ class TextReminder extends Component {
   handleSubmit = () => {
     if (this.state.phone.length < 10) {
       this.setState({
-        error: 'Please enter a 10-digit phone number (with area code)',
+        error: "Please enter a 10-digit phone number (with area code)",
       });
     } else if (this.state.phone.length === 10) {
       this.setState({
@@ -52,7 +56,10 @@ class TextReminder extends Component {
   };
 
   render() {
-    const inputSectionStyle = this.props.visible && !this.props.isCompleted ? modalReminderWrapper : { display: 'none' };
+    const inputSectionStyle =
+      this.props.visible && !this.props.isCompleted
+        ? modalReminderWrapper
+        : { display: "none" };
 
     return (
       <div>
@@ -62,19 +69,25 @@ class TextReminder extends Component {
             type="text"
             name="phone-input"
             onChange={this.handleChange.bind(this)}
-            underlineFocusStyle={{ borderColor: 'black' }}
+            underlineFocusStyle={{ borderColor: "black" }}
             errorText={this.state.error}
             floatingLabelText="enter phone number"
-            floatingLabelFocusStyle={{ color: '#b1b1b1' }}
-            style={{marginBottom: 25}}
-          />
+            floatingLabelFocusStyle={{ color: "#b1b1b1" }}
+            style={{ marginBottom: 25 }}
+            data-mask="(___) ___-____"
+          >
+            <InputMask mask="(999) 999 - 9999" maskChar=" " />
+          </TextField>
 
           <button style={ctaButton} onClick={this.handleSubmit}>
             submit
           </button>
         </div>
 
-        <ReminderSuccess visible={this.props.visible && this.props.isCompleted} type="text"/>
+        <ReminderSuccess
+          visible={this.props.visible && this.props.isCompleted}
+          type="text"
+        />
       </div>
     );
   }
