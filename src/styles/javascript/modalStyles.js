@@ -15,8 +15,6 @@ const modal = {
 
 const closeButtonWrapper = {
   alignSelf: 'flex-end',
-  marginTop: '15px',
-  marginRight: '15px',
 };
 
 const closeButton = {
@@ -39,23 +37,14 @@ const modalButtonsContainer = {
   marginBottom: 10,
 };
 
-const modalButtonStyle = {
-  backgroundColor: '#69C109',
-  color: 'white',
-  borderRadius: '22.5px',
-  height: '40px',
-  width: '122px',
-  fontFamily: 'Avenir',
-  fontSize: '18px',
-  fontWeight: 'bold',
-  border: 'none',
-};
-
 const modalAddressStyles = {
   color: '#4B4B4B',
   fontSize: 18,
   fontFamily: 'Avenir',
   fontWeight: 'bold',
+  marginTop: 10,
+  marginBottom: 10,
+  textAlign: 'center',
 };
 
 const reminderText = {
@@ -64,21 +53,11 @@ const reminderText = {
   fontSize: '16px',
 };
 
-const TextReminderWrapper = {
+const modalReminderWrapper = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-};
-
-const plainButton = {
-  background: 'none',
-  color: 'black',
-  textDecoration: 'underline',
-  fontWeight: 'bold',
-  border: 'none',
-  margin: 0,
-  padding: 0,
-  display: 'block',
+  marginBottom: 15,
 };
 
 const successIcon = {
@@ -99,12 +78,10 @@ export {
   modal,
   closeButton,
   closeButtonWrapper,
-  plainButton,
   modalButtonsContainer,
-  modalButtonStyle,
   modalAddressStyles,
   reminderText,
-  TextReminderWrapper,
+  modalReminderWrapper,
   successIcon,
   successSection,
 };

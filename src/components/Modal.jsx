@@ -4,8 +4,9 @@ import {
   closeButton,
   closeButtonWrapper,
   modalAddressStyles,
-  plainButton,
 } from '../styles/javascript/modalStyles';
+
+import { plainButton } from '../styles/javascript/buttons';
 
 import { DARK_GRAY } from '../styles/javascript/colors';
 

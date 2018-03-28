@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 
-import { modalButtonStyle, plainButton, TextReminderWrapper, successIcon, successSection } from '../styles/javascript/modalStyles';
+import { modalReminderWrapper, successIcon, successSection } from '../styles/javascript/modalStyles';
+import { ctaButton, plainButton } from '../styles/javascript/buttons';
+
 
 import ReminderSuccess from './ReminderSuccess';
 
@@ -49,7 +51,7 @@ class TextReminder extends Component {
   };
 
   render() {
-    const inputSectionStyle = this.props.visible && !this.props.isCompleted ? TextReminderWrapper : { display: 'none' };
+    const inputSectionStyle = this.props.visible && !this.props.isCompleted ? modalReminderWrapper : { display: 'none' };
 
     return (
       <div>
@@ -63,9 +65,10 @@ class TextReminder extends Component {
             errorText={this.state.error}
             floatingLabelText="enter phone number"
             floatingLabelFocusStyle={{ color: '#b1b1b1' }}
+            style={{marginBottom: 25}}
           />
 
-          <button style={modalButtonStyle} onClick={this.handleSubmit}>
+          <button style={ctaButton} onClick={this.handleSubmit}>
             submit
           </button>
         </div>

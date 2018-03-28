@@ -35,9 +35,10 @@ html, body {
 
 .view-picker {
   display: flex;
-  width: 40%;
-  align-self: left;
+  width: 100%;
+  align-items: center;
   margin: 20px 0;
+  justify-content: center;
 }
 
 /* .google-map {
@@ -70,7 +71,7 @@ html, body {
 .modal-wrapper {
   background-color: #fefefe;
   margin: 15% auto;
-  border-radius: 8px;
+  border-radius: 5px;
   width: 325px;
   display: flex;
   flex-direction: column;
@@ -80,14 +81,14 @@ html, body {
 
 /* tablet styles */
 
-@media screen and (min-width: 560px) {
+/* @media screen and (min-width: 560px) {
   .view-picker {
     display: flex;
     width: 25%;
     align-self: left;
     margin: 20px 0;
   }
-}
+} */
 
 /* desktop styles */
 

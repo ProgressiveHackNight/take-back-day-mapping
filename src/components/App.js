@@ -6,6 +6,7 @@ import ModalContainer from '../containers/ModalContainer';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 
 import { listSection } from '../styles/javascript/listStyles';
+import { DARK_DARK_GRAY } from '../styles/javascript/colors';
 
 const defaultState = {
   selectedLocationId: null,
@@ -68,19 +69,28 @@ class App extends Component {
 
   render() {
     const mobileMapHidden = this.state.isInMobileSize && this.state.selectedMobileView === 'list';
+    const radioSyles = { width: 'fit-content', whiteSpace: 'nowrap', paddingRight: 15 };
 
     return (
       <div className="container">
+
         <RadioButtonGroup className="view-picker" name="view-picker" defaultSelected="map" onChange={this.handleMobileViewChange}>
           <RadioButton
             value="map"
             label="map & list"
+            labelStyle={{color: DARK_DARK_GRAY}}
+            iconStyle={{fill: DARK_DARK_GRAY, border: '#dedede'}}
+            style={radioSyles}
           />
           <RadioButton
             value="list"
             label="list only"
+            labelStyle={{color: DARK_DARK_GRAY}}
+            iconStyle={{fill: DARK_DARK_GRAY, border: '#dedede'}}
+            style={radioSyles}
           />
         </RadioButtonGroup>
+
         <div className="wrapper">
           <Map
             hidden={mobileMapHidden}

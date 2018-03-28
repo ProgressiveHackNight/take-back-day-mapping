@@ -5,9 +5,9 @@ const infoWindowBackground = require('./svgs/info-window.svg');
 const infoWindowStyle = {
   position: 'absolute',
   right: -MARKER_WIDTH * 2.875,
-  bottom: MARKER_WIDTH * 0.875,
+  bottom: 70,
   width: '200px',
-  height: '150px',
+  height: '130px',
   zIndex: 1000,
   color: 'black',
 };
@@ -35,22 +35,11 @@ const infoContainer = {
   background: 'no-repeat',
   backgroundImage: `url(${infoWindowBackground})`,
   backgroundSize: '100%',
-  minHeight: '125px',
+  minHeight: '145px',
   paddingLeft: 15,
   paddingRight: 15,
   paddingTop: 5,
+  alignItems: 'left',
 };
 
-const plainButton = {
-  background: 'none',
-  alignSelf: 'left',
-  color: 'black',
-  textDecoration: 'underline',
-  fontWeight: 'bold',
-  border: 'none',
-  margin: 0,
-  padding: 0,
-  display: 'block',
-};
-
-export { infoWindowStyle, infoContainer, infoContent, infoText, plainButton, infoHeader, infoCloseButton };
+export { infoWindowStyle, infoContainer, infoContent, infoText, infoHeader, infoCloseButton };
