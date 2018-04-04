@@ -61,7 +61,7 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
           <GoogleMapReact
             center={this.props.center}
             defaultZoom={this.props.zoom}
-            bootstrapURLKeys={{ key: 'AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U' }}
+            bootstrapURLKeys={{ key: process.env.MAP_KEY || 'AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U' }}
             onChildClick={this.props.onLocationSelect}
             hoverDistance={MARKER_WIDTH / 2}
             onChildMouseEnter={this.onMarkerMouseEnter}
