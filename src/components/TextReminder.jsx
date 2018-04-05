@@ -28,11 +28,12 @@ class TextReminder extends Component {
 
   handleChange = event => {
     const inputValue = event.target.value;
+    const numberWithoutFormatting = inputValue.replace(/\D/g,'');
 
-    if (this.validateInput(inputValue)) {
+    if (this.validateInput(numberWithoutFormatting)) {
       this.setState({
         error: null,
-        phone: event.target.value,
+        phone: numberWithoutFormatting,
       });
     }
   };

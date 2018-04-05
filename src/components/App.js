@@ -4,14 +4,16 @@ import Map from './Map';
 import ListView from './ListView';
 import ModalContainer from '../containers/ModalContainer';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import ViewPicker from './ViewPicker';
 
 import { listSection } from '../styles/javascript/listStyles';
 import { DARK_DARK_GRAY } from '../styles/javascript/colors';
+import { button, disabledButton, ctaButton } from '../styles/javascript/buttons';
 
 const defaultState = {
   selectedLocationId: null,
   mapCenter: { lat: 40.744679, lng: -73.948542 },
-  selectedMobileView: 'map & list',
+  selectedMobileView: 1,
   isInMobileSize: null,
 };
 
@@ -61,35 +63,22 @@ class App extends Component {
     }));
   };
 
-  handleMobileViewChange = (event, value) => {
+  onViewToggle = event => {
+    const viewSelected = parseInt(event.target.id);
+
     this.setState(state => ({
-      selectedMobileView: value,
+      selectedMobileView: viewSelected,
     }));
   }
 
   render() {
-    const mobileMapHidden = this.state.isInMobileSize && this.state.selectedMobileView === 'list';
+    const mobileMapHidden = this.state.isInMobileSize && this.state.selectedMobileView === 2;
     const radioSyles = { width: 'fit-content', whiteSpace: 'nowrap', paddingRight: 15 };
 
     return (
       <div className="container">
 
-        <RadioButtonGroup className="view-picker" name="view-picker" defaultSelected="map" onChange={this.handleMobileViewChange}>
-          <RadioButton
-            value="map"
-            label="map & list"
-            labelStyle={{color: DARK_DARK_GRAY}}
-            iconStyle={{fill: DARK_DARK_GRAY, border: '#dedede'}}
-            style={radioSyles}
-          />
-          <RadioButton
-            value="list"
-            label="list only"
-            labelStyle={{color: DARK_DARK_GRAY}}
-            iconStyle={{fill: DARK_DARK_GRAY, border: '#dedede'}}
-            style={radioSyles}
-          />
-        </RadioButtonGroup>
+        <ViewPicker activeView={this.state.selectedMobileView} labelOne="Map and List" labelTwo="List Only" onToggleClick={this.onViewToggle} />
 
         <div className="wrapper">
           <Map
