@@ -1,7 +1,7 @@
-import { CTA_GREEN } from './colors';
+import { CTA_GREEN, LIGHT_GRAY, MEDIUM_GRAY } from './colors';
 
-const ctaButton = {
-  backgroundColor: CTA_GREEN,
+const button = {
+  backgroundColor: MEDIUM_GRAY,
   color: 'white',
   borderRadius: '5.5px',
   height: '40px',
@@ -12,6 +12,16 @@ const ctaButton = {
   fontSize: '18px',
   fontWeight: 'bold',
   border: 'none',
+}
+
+const disabledButton = {
+  ...button,
+  backgroundColor: LIGHT_GRAY,
+}
+
+const ctaButton = {
+  ...button,
+  backgroundColor: CTA_GREEN,
 };
 
 const plainButton = {
@@ -25,7 +35,4 @@ const plainButton = {
   display: 'block',
 };
 
-// #27d83e
-// #1cc532
-
-export { ctaButton, plainButton };
+export { button, ctaButton, disabledButton, plainButton };
