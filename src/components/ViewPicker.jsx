@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { button, disabledButton } from "../styles/javascript/buttons";
-import { DARK_GRAY } from "../styles/javascript/colors";
+import { DARK_DARK_GRAY } from "../styles/javascript/colors";
 
 const viewPickerButton = {
   flexBasis: "50%",
@@ -10,15 +10,16 @@ const viewPickerButton = {
 
 const activeViewPickerButton = {
   ...button,
-  backgroundColor: DARK_GRAY,
+  backgroundColor: DARK_DARK_GRAY,
+  fontWeight: "normal",
 };
 
 const inactiveViewPickerButton = {
   ...disabledButton,
   backgroundColor: "white",
-  color: DARK_GRAY,
+  color: DARK_DARK_GRAY,
   border: "2px solid",
-  borderColor: DARK_GRAY,
+  borderColor: DARK_DARK_GRAY,
 };
 
 const leftButton = {

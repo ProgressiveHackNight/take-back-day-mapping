@@ -1,8 +1,7 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import InfoWindow from '../components/InfoWindow';
-import { selectLocation } from '../actions/updateLocationSelect';
-import { endLocationHover } from '../actions/handleHover';
+import InfoWindow from "../components/InfoWindow";
+import { selectLocation } from "../actions/updateLocationSelect";
 
 const mapDispatchToProps = (dispatch, props) => ({
   onClick: () => dispatch(selectLocation(props.location)),

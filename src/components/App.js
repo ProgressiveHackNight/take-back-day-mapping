@@ -1,14 +1,8 @@
-import React, { Component } from 'react';
-import '../styles/css/App.css';
-import Map from './Map';
-import ListView from './ListView';
-import ModalContainer from '../containers/ModalContainer';
-import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
-import ViewPicker from './ViewPicker';
-
-import { listSection } from '../styles/javascript/listStyles';
-import { DARK_DARK_GRAY } from '../styles/javascript/colors';
-import { button, disabledButton, ctaButton } from '../styles/javascript/buttons';
+import React, { Component } from "react";
+import Map from "./Map";
+import ListView from "./ListView";
+import ModalContainer from "../containers/ModalContainer";
+import ViewPicker from "./ViewPicker";
 
 const defaultState = {
   selectedLocationId: null,
@@ -25,11 +19,11 @@ class App extends Component {
 
     this.setState(state => ({
       isInMobileSize: window.innerWidth < 765 ? true : false,
-    }))
+    }));
 
-    this.resizeListener = window.addEventListener('resize', () => {
+    this.resizeListener = window.addEventListener("resize", () => {
       this.handleScreenSizeChange();
-    })
+    });
   }
 
   handleScreenSizeChange = e => {
@@ -39,7 +33,7 @@ class App extends Component {
     this.setState(state => ({
       isInMobileSize: isMobile,
     }));
-  }
+  };
 
   handleLocationSelect = selectedId => {
     this.setState(state => ({
@@ -48,7 +42,9 @@ class App extends Component {
   };
 
   handleListSelect = selectedId => {
-    const selectedLoc = this.props.locations.find(location => location.id == selectedId);
+    const selectedLoc = this.props.locations.find(
+      location => location.id == selectedId
+    );
     if (selectedLoc) {
       this.setState(state => ({
         mapCenter: { lat: selectedLoc.lat, lng: selectedLoc.lon },
@@ -69,29 +65,40 @@ class App extends Component {
     this.setState(state => ({
       selectedMobileView: viewSelected,
     }));
-  }
+  };
 
   render() {
-    const mobileMapHidden = this.state.isInMobileSize && this.state.selectedMobileView === 2;
-    const radioSyles = { width: 'fit-content', whiteSpace: 'nowrap', paddingRight: 15 };
+    const mobileMapHidden =
+      this.state.isInMobileSize && this.state.selectedMobileView === 2;
 
     return (
       <div className="container">
-
-        <ViewPicker activeView={this.state.selectedMobileView} labelOne="Map and List" labelTwo="List Only" onToggleClick={this.onViewToggle} />
+        <ViewPicker
+          activeView={this.state.selectedMobileView}
+          labelOne="Map and List"
+          labelTwo="List Only"
+          onToggleClick={this.onViewToggle}
+        />
 
         <div className="wrapper">
           <Map
             hidden={mobileMapHidden}
-            locations={this.props.locations}j
+            locations={this.props.locations}
+            j
             selectedMarker={this.state.selectedLocationId}
             onLocationSelect={this.handleLocationSelect}
             center={this.state.mapCenter}
             onInfoClose={this.infoCloseClick}
           />
-        <ListView locations={this.props.locations} onLocationSelect={this.handleListSelect}/>
+          <ListView
+            locations={this.props.locations}
+            onLocationSelect={this.handleListSelect}
+          />
         </div>
-        <ModalContainer visible={this.props.selectedLocation} onCloseClick={this.props.onCloseClick} />
+        <ModalContainer
+          visible={this.props.selectedLocation}
+          onCloseClick={this.props.onCloseClick}
+        />
       </div>
     );
   }

@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
+import React from "react";
 
 const inputStyle = {
-  width: '98%',
+  width: "98%",
   borderRadius: 60,
-  border: '1px solid #dedede',
+  border: "1px solid #dedede",
   lineHeight: 2.5,
   paddingLeft: 20,
   fontSize: 14,
-  letterSpacing: '0.05em',
+  letterSpacing: "0.05em",
   marginBottom: 10,
-}
+};
 
 const SearchField = ({ value, handleChange }) => {
   return (

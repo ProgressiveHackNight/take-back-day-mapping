@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
-import shouldPureComponentUpdate from 'react-pure-render/function';
-import PropTypes from 'prop-types';
-import Paper from 'material-ui/Paper';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Paper from "material-ui/Paper";
 
-import { ctaButton } from '../styles/javascript/buttons';
+import { ctaButton } from "../styles/javascript/buttons";
 
 const locationTitleStyle = {
-  color: '#4B4B4B',
+  color: "#4B4B4B",
   fontSize: 20,
-  fontFamily: 'Avenir',
-  fontWeight: 'bold',
+  fontFamily: "Avenir",
+  fontWeight: "bold",
 };
 
 const locationAddressStyle = {
-  color: '#8C8C8C',
+  color: "#8C8C8C",
   fontSize: 14,
-  fontFamily: 'Avenir',
+  fontFamily: "Avenir",
 };
 
 const paperStyle = {
-  width: '100%',
-  textAlign: 'left',
-  display: 'inline-block',
-  overflow: 'auto',
+  width: "100%",
+  textAlign: "left",
+  display: "inline-block",
+  overflow: "auto",
   borderRadius: 5,
   marginTop: 10,
   paddingLeft: 20,
@@ -33,7 +32,7 @@ const paperStyle = {
 
 const paperHoverStyle = {
   ...paperStyle,
-  backgroundColor: '#EFEFEF',
+  backgroundColor: "#EFEFEF",
 };
 
 class ListItem extends Component {

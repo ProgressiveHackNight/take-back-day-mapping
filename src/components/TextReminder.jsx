@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import TextField from "material-ui/TextField";
 import InputMask from "react-input-mask";
 import shouldPureComponentUpdate from "react-pure-render/function";
 
-import {
-  modalReminderWrapper,
-  successIcon,
-  successSection,
-} from "../styles/javascript/modalStyles";
-import { ctaButton, plainButton } from "../styles/javascript/buttons";
+import { modalReminderWrapper } from "../styles/javascript/modalStyles";
+import { ctaButton } from "../styles/javascript/buttons";
 
 import ReminderSuccess from "./ReminderSuccess";
 

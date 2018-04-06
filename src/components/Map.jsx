@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import controllable from 'react-controllables';
-import GoogleMapReact from 'google-map-react';
-import shouldPureComponentUpdate from 'react-pure-render/function';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import controllable from "react-controllables";
+import GoogleMapReact from "google-map-react";
+import shouldPureComponentUpdate from "react-pure-render/function";
 
-import MapMarkerContainer from '../containers/MapMarkerContainer';
+import MapMarkerContainer from "../containers/MapMarkerContainer";
 
-import { MARKER_WIDTH } from '../styles/javascript/mapMarkerStyles';
+import { MARKER_WIDTH } from "../styles/javascript/mapMarkerStyles";
 
-const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
+const Map = controllable(["center", "zoom", "hoverKey", "clickKey"])(
   class Map extends Component {
     static propTypes = {
       center: PropTypes.object, // @controllable
@@ -26,10 +26,6 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
 
     shouldComponentUpdate = shouldPureComponentUpdate;
 
-    constructor(props) {
-      super(props);
-    }
-
     onMarkerMouseEnter = key => {
       this.props.onHoverKeyChange(key);
     };
@@ -39,7 +35,9 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
     };
 
     render() {
-      const mapClassName = this.props.hidden ? 'google-map-mobile-hidden' : 'google-map';
+      const mapClassName = this.props.hidden
+        ? "google-map-mobile-hidden"
+        : "google-map";
 
       const generateMarkers = mapLocations => {
         return mapLocations.map((location, index) => {
@@ -61,7 +59,11 @@ const Map = controllable(['center', 'zoom', 'hoverKey', 'clickKey'])(
           <GoogleMapReact
             center={this.props.center}
             defaultZoom={this.props.zoom}
-            bootstrapURLKeys={{ key: process.env.MAP_KEY || 'AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U' }}
+            bootstrapURLKeys={{
+              key:
+                process.env.MAP_KEY ||
+                "AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U",
+            }}
             onChildClick={this.props.onLocationSelect}
             hoverDistance={MARKER_WIDTH / 2}
             onChildMouseEnter={this.onMarkerMouseEnter}
