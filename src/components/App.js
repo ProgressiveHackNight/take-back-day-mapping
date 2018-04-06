@@ -2,15 +2,7 @@ import React, { Component } from "react";
 import Map from "./Map";
 import ListView from "./ListView";
 import ModalContainer from "../containers/ModalContainer";
-import { RadioButton, RadioButtonGroup } from "material-ui/RadioButton";
 import ViewPicker from "./ViewPicker";
-
-import { listSection } from "../styles/javascript/listStyles";
-import {
-  button,
-  disabledButton,
-  ctaButton,
-} from "../styles/javascript/buttons";
 
 const defaultState = {
   selectedLocationId: null,
@@ -78,11 +70,6 @@ class App extends Component {
   render() {
     const mobileMapHidden =
       this.state.isInMobileSize && this.state.selectedMobileView === 2;
-    const radioSyles = {
-      width: "fit-content",
-      whiteSpace: "nowrap",
-      paddingRight: 15,
-    };
 
     return (
       <div className="container">

@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import shouldPureComponentUpdate from 'react-pure-render/function';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import shouldPureComponentUpdate from "react-pure-render/function";
 import {
-  squarePinMapMarker,
-  hoverSquarePinMapMarker,
   getMarkerStyle,
   getMarkerHoverStyle,
-} from '../styles/javascript/mapMarkerStyles';
+} from "../styles/javascript/mapMarkerStyles";
 
-import InfoWindowContainer from '../containers/InfoWindowContainer';
+import InfoWindowContainer from "../containers/InfoWindowContainer";
 
 class MapMarker extends Component {
   static propTypes = {
@@ -23,10 +21,6 @@ class MapMarker extends Component {
 
   shouldComponentUpdate = shouldPureComponentUpdate;
 
-  constructor(props) {
-    super(props);
-  }
-
   showInfoWindow = () => {
     if (this.props.selected) {
       return (
@@ -37,16 +31,23 @@ class MapMarker extends Component {
         />
       );
     }
-    return '';
+    return "";
   };
 
   render() {
     const normalMarkerStyle = getMarkerStyle(this.props.location.type);
     const hoverMarkerStyle = getMarkerHoverStyle(this.props.location.type);
-    const style = this.props.selected || this.props.hover ? hoverMarkerStyle : normalMarkerStyle;
+    const style =
+      this.props.selected || this.props.hover
+        ? hoverMarkerStyle
+        : normalMarkerStyle;
 
     return (
-      <div style={style} onMouseEnter={this.props.onHover} onMouseLeave={this.props.onHoverEnd}>
+      <div
+        style={style}
+        onMouseEnter={this.props.onHover}
+        onMouseLeave={this.props.onHoverEnd}
+      >
         {this.showInfoWindow()}
       </div>
     );
