@@ -3,6 +3,7 @@ import Map from "./Map";
 import ListView from "./ListView";
 import ModalContainer from "../containers/ModalContainer";
 import ViewPicker from "./ViewPicker";
+import NoLocationReminder from "./NoLocationReminder";
 
 const defaultState = {
   selectedLocationId: null,
@@ -81,19 +82,22 @@ class App extends Component {
         />
 
         <div className="wrapper">
-          <Map
-            hidden={mobileMapHidden}
-            locations={this.props.locations}
-            j
-            selectedMarker={this.state.selectedLocationId}
-            onLocationSelect={this.handleLocationSelect}
-            center={this.state.mapCenter}
-            onInfoClose={this.infoCloseClick}
-          />
-          <ListView
-            locations={this.props.locations}
-            onLocationSelect={this.handleListSelect}
-          />
+          <div className="map-wrapper">
+            <Map
+              hidden={mobileMapHidden}
+              locations={this.props.locations}
+              j
+              selectedMarker={this.state.selectedLocationId}
+              onLocationSelect={this.handleLocationSelect}
+              center={this.state.mapCenter}
+              onInfoClose={this.infoCloseClick}
+            />
+            <ListView
+              locations={this.props.locations}
+              onLocationSelect={this.handleListSelect}
+            />
+          </div>
+          <NoLocationReminder className="reminders-wrapper" />
         </div>
         <ModalContainer
           visible={this.props.selectedLocation}

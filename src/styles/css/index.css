@@ -23,7 +23,7 @@ body {
   background-color: #ffffff;
   height: auto;
   width: auto;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 /* mobile styles */
@@ -34,6 +34,27 @@ body {
   align-items: center;
   width: 100%;
   height: auto;
+}
+
+.map-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.reminder-container {
+  background-color: #efefef; /* LIGHT_GRAY */
+  padding: 60px 30px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.reminder-button {
+  width: 200px;
+  margin: 10px;
 }
 
 .view-picker {
@@ -76,13 +97,15 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 15px;
+  text-align: center;
 }
 
 /* desktop styles */
 
 @media screen and (min-width: 765px) {
-  .wrapper {
+  .map-wrapper {
     flex-direction: row;
+    margin-bottom: 0;
   }
 
   .view-picker {

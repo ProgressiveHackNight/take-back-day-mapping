@@ -1,23 +1,23 @@
-import { CTA_GREEN, LIGHT_GRAY, MEDIUM_GRAY } from './colors';
+import { CTA_GREEN, LIGHT_GRAY, MEDIUM_GRAY } from "./colors";
 
 const button = {
   backgroundColor: MEDIUM_GRAY,
-  color: 'white',
-  borderRadius: '5.5px',
-  height: '40px',
-  width: 'fit-content',
+  color: "white",
+  borderRadius: "5.5px",
+  height: "40px",
+  width: "auto",
   minWidth: 115,
-  padding: '0 15px',
-  fontFamily: 'Avenir',
-  fontSize: '18px',
-  fontWeight: 'bold',
-  border: 'none',
-}
+  padding: "0 15px",
+  fontFamily: "Avenir",
+  fontSize: "18px",
+  fontWeight: "bold",
+  border: "none",
+};
 
 const disabledButton = {
   ...button,
   backgroundColor: LIGHT_GRAY,
-}
+};
 
 const ctaButton = {
   ...button,
@@ -25,14 +25,14 @@ const ctaButton = {
 };
 
 const plainButton = {
-  background: 'none',
-  color: 'black',
-  textDecoration: 'underline',
-  fontWeight: 'bold',
-  border: 'none',
+  background: "none",
+  color: "black",
+  textDecoration: "underline",
+  fontWeight: "bold",
+  border: "none",
   margin: 0,
   padding: 0,
-  display: 'block',
+  display: "block",
 };
 
 export { button, ctaButton, disabledButton, plainButton };

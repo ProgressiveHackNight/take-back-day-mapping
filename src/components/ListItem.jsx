@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Paper from "material-ui/Paper";
 
 import { ctaButton } from "../styles/javascript/buttons";
+import { LIGHT_GRAY } from "../styles/javascript/colors";
 
 const locationTitleStyle = {
   color: "#4B4B4B",
@@ -32,7 +33,7 @@ const paperStyle = {
 
 const paperHoverStyle = {
   ...paperStyle,
-  backgroundColor: "#EFEFEF",
+  backgroundColor: LIGHT_GRAY,
 };
 
 class ListItem extends Component {
