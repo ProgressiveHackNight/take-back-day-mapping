@@ -27,7 +27,9 @@ const infoText = {
   marginBottom: 5,
 };
 
-const infoContent = {};
+const infoContent = {
+  textAlign: "left",
+};
 
 const infoContainer = {
   display: "flex",

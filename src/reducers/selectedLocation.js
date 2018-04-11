@@ -1,6 +1,6 @@
-import types from '../actionTypes';
+import types from "../actionTypes";
 
-const selectedLocation = (state = '', { type, payload }) => {
+const selectedLocation = (state = "", { type, payload }) => {
   switch (type) {
     case types.UPDATE_SELECTED_LOCATION:
       return payload;

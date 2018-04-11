@@ -36,7 +36,7 @@ const modalButtonsContainer = {
   marginBottom: 10,
 };
 
-const modalAddressStyles = {
+const modalHeader = {
   color: "#4B4B4B",
   fontSize: 18,
   fontFamily: "Avenir",
@@ -78,7 +78,7 @@ export {
   closeButton,
   closeButtonWrapper,
   modalButtonsContainer,
-  modalAddressStyles,
+  modalHeader,
   reminderText,
   modalReminderWrapper,
   successIcon,

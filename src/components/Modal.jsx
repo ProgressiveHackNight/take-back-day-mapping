@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   modal,
   closeButton,
   closeButtonWrapper,
-  modalAddressStyles,
-} from '../styles/javascript/modalStyles';
+  modalHeader,
+} from "../styles/javascript/modalStyles";
 
-import { plainButton } from '../styles/javascript/buttons';
+import { plainButton } from "../styles/javascript/buttons";
 
-import { DARK_GRAY } from '../styles/javascript/colors';
+import { DARK_GRAY } from "../styles/javascript/colors";
 
-import TextReminderContainer from '../containers/TextReminderContainer';
-import EmailReminderContainer from '../containers/EmailReminderContainer';
-import ChooseReminder from './ChooseReminder';
-import displayReminderType from '../helpers/displayReminderType';
+import TextReminderContainer from "../containers/TextReminderContainer";
+import EmailReminderContainer from "../containers/EmailReminderContainer";
+import ChooseReminder from "./ChooseReminder";
+import displayReminderType from "../helpers/displayReminderType";
 
 class Modal extends Component {
   constructor(props) {
@@ -53,15 +53,22 @@ class Modal extends Component {
   };
 
   render() {
-    const visibleStyle = { display: 'block' };
-    const hiddenStyle = { display: 'none' };
+    const visibleStyle = { display: "block" };
+    const hiddenStyle = { display: "none" };
 
     const modalStyle = this.props.visible ? modal : hiddenStyle;
-    const phoneInputVisible = this.state.phoneButtonClicked && !this.state.emailButtonClicked;
-    const emailInputVisible = this.state.emailButtonClicked && !this.state.phoneButtonClicked;
+    const phoneInputVisible =
+      this.state.phoneButtonClicked && !this.state.emailButtonClicked;
+    const emailInputVisible =
+      this.state.emailButtonClicked && !this.state.phoneButtonClicked;
     const reminderTypeStyle =
-      !this.state.phoneButtonClicked && !this.state.emailButtonClicked ? visibleStyle : hiddenStyle;
-    const backButtonStyle = this.state.phoneButtonClicked || this.state.emailButtonClicked ? plainButton : hiddenStyle;
+      !this.state.phoneButtonClicked && !this.state.emailButtonClicked
+        ? visibleStyle
+        : hiddenStyle;
+    const backButtonStyle =
+      this.state.phoneButtonClicked || this.state.emailButtonClicked
+        ? plainButton
+        : hiddenStyle;
 
     return (
       <div style={modalStyle}>
@@ -77,17 +84,26 @@ class Modal extends Component {
             <span style={closeButton}>&times;</span>
           </div>
 
-          <p style={{ color: DARK_GRAY }}>Get a {displayReminderType(this.state)} reminder to drop off at this location:</p>
+          <p style={{ color: DARK_GRAY }}>
+            Get a {displayReminderType(this.state)} reminder to drop off at this
+            location:
+          </p>
 
-          <h4 style={modalAddressStyles}>{this.props.location.location}</h4>
+          <h4 style={modalHeader}>{this.props.location.location}</h4>
 
           <ChooseReminder
             sectionStyle={reminderTypeStyle}
             textButtonClick={this.handlePhoneButtonClick}
             emailButtonClick={this.handleEmailButtonClick}
           />
-          <TextReminderContainer location={this.props.location} visible={phoneInputVisible} />
-          <EmailReminderContainer location={this.props.location} visible={emailInputVisible} />
+          <TextReminderContainer
+            location={this.props.location}
+            visible={phoneInputVisible}
+          />
+          <EmailReminderContainer
+            location={this.props.location}
+            visible={emailInputVisible}
+          />
           <button style={backButtonStyle} onClick={this.handleBackButtonClick}>
             go back
           </button>

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { button, disabledButton } from "../styles/javascript/buttons";
+import { button } from "../styles/javascript/buttons";
 import { DARK_DARK_GRAY } from "../styles/javascript/colors";
 
 const viewPickerButton = {
@@ -15,7 +15,7 @@ const activeViewPickerButton = {
 };
 
 const inactiveViewPickerButton = {
-  ...disabledButton,
+  ...button,
   backgroundColor: "white",
   color: DARK_DARK_GRAY,
   border: "2px solid",

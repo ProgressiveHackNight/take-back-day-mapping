@@ -1,20 +1,10 @@
 import React from "react";
-
-const inputStyle = {
-  width: "98%",
-  borderRadius: 60,
-  border: "1px solid #dedede",
-  lineHeight: 2.5,
-  paddingLeft: 20,
-  fontSize: 14,
-  letterSpacing: "0.05em",
-  marginBottom: 10,
-};
+import { input } from "../styles/javascript/input";
 
 const SearchField = ({ value, handleChange }) => {
   return (
     <input
-      style={inputStyle}
+      style={input}
       id="phone-field"
       type="text"
       name="phone-input"
