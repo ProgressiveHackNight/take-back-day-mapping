@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Element } from 'react-scroll';
 
 import NoLocationModal from "./NoLocationModal";
 
@@ -53,7 +54,7 @@ class NonLocationReminder extends Component {
 
   render() {
     return (
-      <div style={style} className="reminder-container">
+      <Element style={style} className="reminder-container" name="text">
         <div>
           <h2>Get a drop-off reminder</h2>
           <p>
@@ -88,7 +89,7 @@ class NonLocationReminder extends Component {
           onClose={this.onModalClose}
           reminderType={this.state.type}
         />
-      </div>
+      </Element>
     );
   }
 }
