@@ -61,7 +61,7 @@ const Map = controllable(["center", "zoom", "hoverKey", "clickKey"])(
             defaultZoom={this.props.zoom}
             bootstrapURLKeys={{
               key:
-                process.env.MAP_KEY ||
+                process.env.REACT_APP_MAP_KEY ||
                 "AIzaSyDxJRIxEgWCGd2u-a_ZaucTTO3_DzHHL4U",
             }}
             onChildClick={this.props.onLocationSelect}
