@@ -95,6 +95,7 @@ class Modal extends Component {
             sectionStyle={reminderTypeStyle}
             textButtonClick={this.handlePhoneButtonClick}
             emailButtonClick={this.handleEmailButtonClick}
+            location={this.props.location.location}
           />
           <TextReminderContainer
             location={this.props.location}

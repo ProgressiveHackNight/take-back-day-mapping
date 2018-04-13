@@ -2,8 +2,9 @@ import React from 'react';
 
 import { modalButtonsContainer, reminderText } from '../styles/javascript/modalStyles';
 import { ctaButton } from '../styles/javascript/buttons';
+import AddToCalendar from './AddToCalendar';
 
-const ChooseReminder = ({ sectionStyle, textButtonClick, emailButtonClick }) => {
+const ChooseReminder = ({ sectionStyle, textButtonClick, emailButtonClick, location }) => {
   return (
     <div style={sectionStyle}>
       <p style={reminderText}>What kind of reminder would you like to recieve?</p>
@@ -15,6 +16,7 @@ const ChooseReminder = ({ sectionStyle, textButtonClick, emailButtonClick }) => 
           email
         </button>
       </div>
+      <AddToCalendar location={location}/>
     </div>
   );
 };
