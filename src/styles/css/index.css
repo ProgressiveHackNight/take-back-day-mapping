@@ -149,3 +149,19 @@ body {
 .list-view-mobile-hidden {
   display: none;
 }
+
+.react-add-to-calendar__dropdown {
+  box-shadow: 0 0 3px darkgray;
+  background-color: white;
+}
+
+.react-add-to-calendar__dropdown ul {
+  list-style-type: none;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.react-add-to-calendar__dropdown a {
+    color: black;
+    text-decoration: none;
+}

@@ -5,9 +5,11 @@ import NoLocationModal from "./NoLocationModal";
 
 import { DARK_GRAY } from "../styles/javascript/colors";
 import { ctaButton } from "../styles/javascript/buttons";
+import AddToCalendar from './AddToCalendar';
 
 const style = {
   color: DARK_GRAY,
+  padding: '150px 60px',
 };
 
 const buttonStyle = {
@@ -83,6 +85,9 @@ class NonLocationReminder extends Component {
           >
             get email
           </button>
+          <div>
+            <AddToCalendar />
+          </div>
         </div>
         <NoLocationModal
           isActive={this.state.modalIsActive}
