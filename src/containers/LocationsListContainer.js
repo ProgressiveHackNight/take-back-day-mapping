@@ -1,20 +1,9 @@
-import { connect } from 'react-redux';
-import LocationsList from '../components/LocationsList';
-
-const showEvents = state => {
-  if (state.searchInput) {
-    return state.locations.filter(event => {
-      const eventName = event.name.toLowerCase();
-      const eventAddress = event.location.toLowerCase();
-      const searchInput = state.searchInput.toLowerCase();
-      return eventName.indexOf(searchInput) !== -1 || eventAddress.indexOf(searchInput) !== -1;
-    });
-  }
-  return state.locations;
-};
+import { connect } from "react-redux";
+import LocationsList from "../components/LocationsList";
+import getLocations from "../selectors/getLocations";
 
 const mapStateToProps = state => ({
-  events: showEvents(state),
+  locations: getLocations(state),
 });
 
 const LocationsListContainer = connect(mapStateToProps)(LocationsList);

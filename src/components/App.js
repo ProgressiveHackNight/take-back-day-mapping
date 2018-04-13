@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import ReactGA from "react-ga";
 import Map from "./Map";
-import ListView from "./ListView";
+import ListViewContainer from "../containers/ListViewContainer";
 import ModalContainer from "../containers/ModalContainer";
 import ViewPicker from "./ViewPicker";
 import NoLocationReminder from "./NoLocationReminder";
+
+const GOOGLE_ANALYTICS_CODE = "XX-XXXXXX-XX";
 
 const defaultState = {
   selectedLocationId: null,
@@ -13,6 +16,10 @@ const defaultState = {
 };
 
 class App extends Component {
+  constructor() {
+    super();
+    ReactGA.initialize(GOOGLE_ANALYTICS_CODE);
+  }
   state = defaultState;
 
   componentDidMount() {
@@ -92,7 +99,7 @@ class App extends Component {
               center={this.state.mapCenter}
               onInfoClose={this.infoCloseClick}
             />
-            <ListView
+            <ListViewContainer
               locations={this.props.locations}
               onLocationSelect={this.handleListSelect}
             />
