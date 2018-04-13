@@ -3,10 +3,11 @@ import mockData from '../mockData';
 const jsonEndpoint = 'https://takebackday.infoloom.com/media/output.json';
 
 export const fetchLocations = () => (
- fetch(jsonEndpoint)
-   .then(resp => resp.json())
-   .then(resp => toLocations(resp))
-   .catch(() => toLocations(mockData))
+ // fetch(jsonEndpoint)
+  //   .then(resp => resp.json())
+  //   .then(resp => toLocations(resp))
+  //   .catch(() => toLocations(mockData))
+  Promise.resolve(toLocations(mockData))
 );
 
 export const toLocations = (apiLocations) => (
