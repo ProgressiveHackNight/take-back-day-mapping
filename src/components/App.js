@@ -6,7 +6,7 @@ import ModalContainer from "../containers/ModalContainer";
 import ViewPicker from "./ViewPicker";
 import NoLocationReminder from "./NoLocationReminder";
 
-const GOOGLE_ANALYTICS_CODE = "XX-XXXXXX-XX";
+const GOOGLE_ANALYTICS_CODE = "UA-33973995-10";
 
 const defaultState = {
   selectedLocationId: null,
