@@ -12,6 +12,7 @@
     "react-add-to-calendar": "^0.1.5",
     "react-controllables": "^0.6.0",
     "react-dom": "^16.2.0",
+    "react-ga": "^2.4.1",
     "react-input-mask": "^1.2.2",
     "react-pure-render": "^1.0.2",
     "react-redux": "^5.0.7",
