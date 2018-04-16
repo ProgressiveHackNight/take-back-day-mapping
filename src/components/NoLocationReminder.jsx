@@ -60,8 +60,9 @@ class NonLocationReminder extends Component {
         <div>
           <h2>Get a drop-off reminder</h2>
           <p>
-            We'll send you a message on Take Back Day to remind you to find a
-            drop-off location to swing by.
+            Sign up to get a text or email reminder with your nearest
+            medication drop-off location before the next
+            National Prescription Drug Take Back Day.
           </p>
         </div>
         <div>
