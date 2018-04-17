@@ -57,7 +57,7 @@ class NonLocationReminder extends Component {
   render() {
     return (
       <Element style={style} className="reminder-container" name="text">
-        <div>
+        <div class="container-constrain">
           <h2>Get a drop-off reminder</h2>
           <p>
             Sign up to get a text or email reminder with your nearest
