@@ -115,7 +115,7 @@ body {
 }
 
 input {
-  font-size: 16px;
+  font-size: 16px !important; /* */
 }
 
 button:hover {
@@ -156,7 +156,7 @@ button:hover {
   }
 
   .list-container {
-    height: 471px;
+    height: 460px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
