@@ -8,7 +8,7 @@ const button = {
   width: "auto",
   minWidth: 115,
   padding: "0 15px",
-  fontFamily: "Avenir, Roboto, 'Open Sans', Arial, sans-serif",
+  fontFamily: "Avenir, Roboto, Open Sans, Arial, sans-serif",
   fontSize: "18px",
   fontWeight: "bold",
   border: "none",

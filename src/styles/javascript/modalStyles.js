@@ -39,7 +39,7 @@ const modalButtonsContainer = {
 const modalHeader = {
   color: "#4B4B4B",
   fontSize: 18,
-  fontFamily: "Avenir, Roboto, 'Open Sans', Arial, sans-serif",
+  fontFamily: "Avenir, Roboto, Open Sans, Arial, sans-serif",
   fontWeight: "bold",
   marginTop: 10,
   marginBottom: 10,
