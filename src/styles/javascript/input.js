@@ -7,6 +7,8 @@ const input = {
   fontSize: 14,
   letterSpacing: "0.05em",
   marginBottom: 10,
+  marginTop: 10,
+  height: 40,
 };
 
 export { input };

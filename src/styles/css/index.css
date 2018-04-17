@@ -191,6 +191,8 @@ button:hover {
 .react-add-to-calendar__dropdown {
   box-shadow: 0 0 3px darkgray;
   background-color: white;
+  z-index: 999;
+  position: relative; /* Fixes iOS displaying behind all content */
 }
 
 .react-add-to-calendar__dropdown ul {
