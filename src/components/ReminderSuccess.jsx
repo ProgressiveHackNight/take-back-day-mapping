@@ -7,6 +7,7 @@ const noteStyle = {
   fontSize: 14,
   marginBottom: 25,
   marginTop: 30,
+  maxWidth: 350,
 };
 
 const ReminderSuccess = ({visible, type}) => {
