@@ -8,14 +8,11 @@ import { LIGHT_GRAY } from "../styles/javascript/colors";
 const locationTitleStyle = {
   color: "#4B4B4B",
   fontSize: 20,
-  fontFamily: "Avenir",
-  fontWeight: "bold",
 };
 
 const locationAddressStyle = {
   color: "#8C8C8C",
   fontSize: 14,
-  fontFamily: "Avenir",
 };
 
 const paperStyle = {
