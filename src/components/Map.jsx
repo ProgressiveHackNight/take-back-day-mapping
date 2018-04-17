@@ -41,7 +41,7 @@ const Map = controllable(["center", "zoom", "hoverKey", "clickKey"])(
 
       const generateMarkers = mapLocations => {
         return mapLocations.map((location, index) => {
-          return (
+          return (location.lat && location.lon) && (
             <MapMarkerContainer
               key={location.id}
               location={location}
