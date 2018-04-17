@@ -38,7 +38,7 @@ const NoLocationModal = ({ reminderType, isActive, onClose, onSubmit }) => {
         </div>
 
         <h4 style={modalHeader}>{modalText}</h4>
-        <p style={{ color: DARK_GRAY, lineHeight: "28px" }}>
+        <p style={{ color: DARK_GRAY, lineHeight: "28px", maxWidth: 350 }}>
           You'll receive a note on Take Back Day reminding you to clear your
           cabinets.
         </p>

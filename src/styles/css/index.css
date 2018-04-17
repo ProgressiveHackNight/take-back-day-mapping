@@ -174,6 +174,7 @@ button:hover {
   .container-constrain {
     max-width: 1000px;
     margin: 0 auto;
+    width: 100% /* Fixes IE11 bugging out and left aligning a flexbox item */
   }
 }
 
@@ -196,6 +197,10 @@ button:hover {
   list-style-type: none;
   padding: 5px;
   margin: 10px 0;
+}
+
+.react-add-to-calendar__dropdown li {
+  padding: 0;
 }
 
 .react-add-to-calendar__dropdown a {
