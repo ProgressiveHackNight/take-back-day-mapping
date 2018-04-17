@@ -4,7 +4,7 @@ const input = {
   border: "1px solid #dedede",
   lineHeight: 2.5,
   paddingLeft: 20,
-  fontSize: 14,
+  fontSize: 16,
   letterSpacing: "0.05em",
   marginBottom: 10,
   marginTop: 10,

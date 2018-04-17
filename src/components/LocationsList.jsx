@@ -7,7 +7,7 @@ import { MEDIUM_GRAY } from "../styles/javascript/colors";
 const noLocations = {
   textAlign: "center",
   color: MEDIUM_GRAY,
-  marginTop: "15px",
+  paddingTop: "15px",
 };
 
 const generateListItems = (locations, onLocationSelect) => {
