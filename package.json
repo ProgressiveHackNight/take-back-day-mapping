@@ -4,6 +4,7 @@
   "private": true,
   "main": "exports.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "firebase": "^4.11.0",
     "google-map-react": "^0.32.0",
     "material-ui": "^0.20.0",
