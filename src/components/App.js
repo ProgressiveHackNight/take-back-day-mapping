@@ -51,7 +51,7 @@ class App extends Component {
 
   handleListSelect = selectedId => {
     const selectedLoc = this.props.locations.find(
-      location => location.id == selectedId
+      location => location.id === selectedId
     );
     if (selectedLoc) {
       this.setState(state => ({
