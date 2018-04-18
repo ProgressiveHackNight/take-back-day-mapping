@@ -27,19 +27,19 @@ class NonLocationReminder extends Component {
   }
 
   onModalClose = () => {
-    console.log("clicked");
+    // console.log("clicked");
     this.setState({
       modalIsActive: false,
     });
-    console.log("modalIsActive", this.state.modalIsActive);
+    // console.log("modalIsActive", this.state.modalIsActive);
   };
 
   onRedminderClick = () => {
-    console.log("clicked");
+    // console.log("clicked");
     this.setState({
       modalIsActive: true,
     });
-    console.log("modalIsActive", this.state.modalIsActive);
+    // console.log("modalIsActive", this.state.modalIsActive);
   };
 
   onTextButtonClick = () => {
