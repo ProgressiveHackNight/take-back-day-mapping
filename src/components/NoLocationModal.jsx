@@ -11,7 +11,7 @@ import {
 import { DARK_GRAY } from "../styles/javascript/colors";
 
 const NoLocationModal = ({ reminderType, isActive, onClose, onSubmit }) => {
-  const visibleStyle = { display: "block" };
+  // const visibleStyle = { display: "block" };
   const hiddenStyle = { display: "none" };
 
   const modalStyle = isActive ? modal : hiddenStyle;
