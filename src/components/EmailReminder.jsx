@@ -63,6 +63,7 @@ class TextReminder extends Component {
             floatingLabelText="enter your email address"
             floatingLabelFocusStyle={{ color: "#b1b1b1" }}
             style={{ marginBottom: 25 }}
+            autoFocus
           />
 
           <button style={ctaButton} onClick={this.handleClick}>

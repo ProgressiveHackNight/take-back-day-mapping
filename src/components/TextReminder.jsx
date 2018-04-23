@@ -71,7 +71,7 @@ class TextReminder extends Component {
             style={{ marginBottom: 25 }}
             data-mask="(___) ___-____"
           >
-            <InputMask mask="(999) 999 - 9999" maskChar=" " />
+            <InputMask mask="(999) 999 - 9999" maskChar=" " autoFocus/>
           </TextField>
 
           <button style={ctaButton} onClick={this.handleSubmit}>
