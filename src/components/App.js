@@ -68,7 +68,7 @@ class App extends Component {
   };
 
   onViewToggle = event => {
-    const viewSelected = parseInt(event.target.id);
+    const viewSelected = parseInt(event.target.id, 10);
 
     this.setState(state => ({
       selectedMobileView: viewSelected,
