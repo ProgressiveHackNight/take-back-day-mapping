@@ -6,10 +6,10 @@ const modal = {
   zIndex: "1",
   left: "0",
   top: "0",
-  width: "100%",
+  width: "100vw",
   overflow: "auto",
   backgroundColor: "rgba(0,0,0,0.4)",
-  height: "100%",
+  height: "100vh", // Removing this stops the jitter on error and label movement but reduced the full height of the modal background
 };
 
 const closeButtonWrapper = {
@@ -26,6 +26,7 @@ const closeButton = {
   justifyContent: "center",
   alignItems: "center",
   color: "white",
+  cursor: "pointer",
 };
 
 const modalButtonsContainer = {
