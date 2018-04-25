@@ -122,6 +122,11 @@ button:hover {
   cursor: pointer;
 }
 
+.reminder-container .privacy-notice {
+  font-size: 18px;
+  color: #555
+}
+
 /* desktop styles */
 
 @media screen and (min-width: 765px) {
