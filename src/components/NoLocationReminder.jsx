@@ -90,6 +90,9 @@ class NonLocationReminder extends Component {
             <AddToCalendar />
           </div>
         </div>
+        <p className="privacy-notice">
+          After Take Back Day, we will delete any information you have provided to protect your privacy.
+        </p>
         <NoLocationModal
           isActive={this.state.modalIsActive}
           onClose={this.onModalClose}
