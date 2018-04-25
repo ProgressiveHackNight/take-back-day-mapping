@@ -47,7 +47,7 @@ const Map = controllable(["center", "zoom", "hoverKey", "clickKey"])(
               location={location}
               lat={location.lat}
               lng={location.lon}
-              selected={this.props.selectedMarker === location.id}
+              selected={this.props.selectedMarker == location.id}
               onInfoClose={this.props.onInfoClose}
             />
           );
