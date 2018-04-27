@@ -2268,6 +2268,13 @@ export const locationData = [
     "address": "21 Milton Turnpike, Milton, NY 12547"
   },
   {
+    "name": "Marra’s Pharmacy",
+    "longitude": -73.700428,
+    "latitude": 42.771617,
+    "type": "Pharmacy",
+    "address": "1217 Remsen St, Cohoes, NY 12407"
+  },
+  {
     "name": "Massena Police Department",
     "longitude": -74.893341,
     "latitude": 44.931143,
