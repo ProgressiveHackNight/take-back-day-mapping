@@ -10,7 +10,7 @@ const GOOGLE_ANALYTICS_CODE = "UA-33973995-10";
 
 const defaultState = {
   selectedLocationId: null,
-  mapCenter: { lat: 40.744679, lng: -73.948542 },
+  mapCenter: { lat: 42.8864468, lng: -78.8783689 },
   selectedMobileView: 1,
   isInMobileSize: null,
 };

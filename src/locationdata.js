@@ -77,7 +77,7 @@ export const locationData = [
     "address": "4 Elm St, Alfred, NY 14802"
   },
   {
-    "name": "Allegany County Sheriff'S Office",
+    "name": "Allegany County Sheriff's Office",
     "longitude": -78.0146824,
     "latitude": 42.211879,
     "type": "Police",
@@ -103,6 +103,13 @@ export const locationData = [
     "latitude": 40.8477306,
     "type": "Pharmacy",
     "address": "4180 Broadway, New York, NY 10033"
+  },
+  {
+    "name": "Amherst Police Department / Millard Fillmore Hospital",
+    "longitude": -78.730202,
+    "latitude": 42.994237,
+    "type": "Police",
+    "address": "1540 Maple Rd., Williamsville, NY 14221"
   },
   {
     "name": "Amityville Police Department",
@@ -294,7 +301,7 @@ export const locationData = [
     "address": "200 Pondfield Rd, Bronxville, NY 10708"
   },
   {
-    "name": "Broome Co Sheriff'S Office",
+    "name": "Broome Co Sheriff's Office",
     "longitude": -75.911315,
     "latitude": 42.0962182,
     "type": "Police",
@@ -1400,7 +1407,7 @@ export const locationData = [
     "address": "65 Franklin St, Springville, NY 14141"
   },
   {
-    "name": "ErieCommunity College",
+    "name": "Erie Community College",
     "longitude": -78.7218196,
     "latitude": 42.9613654,
     "type": "School",
@@ -2345,18 +2352,11 @@ export const locationData = [
     "address": "245 Summit Point Dr, Henrietta, NY 14467"
   },
   {
-    "name": "Monroe County Sheriff's Department Headquarters",
-    "longitude": -77.6134058,
-    "latitude": 43.1525354,
-    "type": "Police",
-    "address": "130 S Plymouth Ave, Rochester, NY 14614"
-  },
-  {
     "name": "Monroe County Sheriff's Office",
-    "longitude": -77.5037589,
-    "latitude": 43.1205256,
+    "longitude": -77.487042,
+    "latitude": 43.1235,
     "type": "Police",
-    "address": "789 Linden Ave, Rochester, NY 14625"
+    "address": "955 S. Panorama Trail, Rochester, NY 14625"
   },
   {
     "name": "Montgomery CO Sheriff's Office",
@@ -4275,6 +4275,13 @@ export const locationData = [
     "latitude": 42.0776369,
     "type": "Police",
     "address": "1255 W Water St, Elmira, NY 14905"
+  },
+  {
+    "name": "West Seneca Police Department / West Seneca Senior Center",
+    "longitude": -78.732246,
+    "latitude": 42.832444,
+    "type": "Police",
+    "address": "4620 Seneca Street, West Seneca, NY 14224"
   },
   {
     "name": "Westhampton Beach Police Department",
