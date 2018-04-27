@@ -9,7 +9,7 @@ import AddToCalendar from './AddToCalendar';
 
 const style = {
   color: DARK_GRAY,
-  padding: '150px 60px',
+  padding: '150px 20px',
 };
 
 const buttonStyle = {
