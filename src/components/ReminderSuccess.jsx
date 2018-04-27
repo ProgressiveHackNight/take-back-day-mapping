@@ -16,7 +16,8 @@ const ReminderSuccess = ({visible, type}) => {
       <div style={successSection}>
         <div style={successIcon}></div>
         <p style={noteStyle}>
-          We'll send you a {type} reminder on Take Back Day with this address and drop-off instructions
+          All set!<br/>
+          We'll send you a reminder on Take Back Day.
         </p>
       </div>
     );
