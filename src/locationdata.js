@@ -1631,13 +1631,6 @@ export const locationData = [
     "address": "2255 Baseline Rd, Grand Island, NY 14072"
   },
   {
-    "name": "Grand Island Town Hall",
-    "longitude": -78.978555,
-    "latitude": 43.095818,
-    "type": "Government",
-    "address": "1560 Military Rd, Niagara Falls, NY 14304"
-  },
-  {
     "name": "Granville Police Department",
     "longitude": -73.266388,
     "latitude": 43.402151,
