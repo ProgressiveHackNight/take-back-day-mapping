@@ -98,13 +98,6 @@ export const locationData = [
     "address": "4377 Bronx Blvd, Bronx, NY 10466"
   },
   {
-    "name": "AMI Pharmacy",
-    "longitude": -73.9377334,
-    "latitude": 40.8477306,
-    "type": "Pharmacy",
-    "address": "4180 Broadway, New York, NY 10033"
-  },
-  {
     "name": "Amherst Police Department / Millard Fillmore Hospital",
     "longitude": -78.730202,
     "latitude": 42.994237,
@@ -229,13 +222,6 @@ export const locationData = [
     "latitude": 43.0980591,
     "type": "Pharmacy",
     "address": "704 Bleecker St, Utica, NY 13501"
-  },
-  {
-    "name": "Black Rock Pharmacy",
-    "longitude": -78.8983242,
-    "latitude": 42.9410115,
-    "type": "Pharmacy",
-    "address": "431 Tonawanda St, Buffalo, NY 14207"
   },
   {
     "name": "Blooming Grove Pharmacy",
@@ -553,13 +539,6 @@ export const locationData = [
     "address": "6185 Goodrich Rd, Clarence Center, NY 14032"
   },
   {
-    "name": "Clark Mills Police Department",
-    "longitude": -75.3768915,
-    "latitude": 43.0913506,
-    "type": "Police",
-    "address": "2 New St, Clark Mills, NY 13321"
-  },
-  {
     "name": "Claxton Hepburn Medical Center",
     "longitude": -75.499781,
     "latitude": 44.691587,
@@ -600,13 +579,6 @@ export const locationData = [
     "latitude": 40.8079932,
     "type": "Police",
     "address": "W 116th St & Broadway, New York, NY 10027"
-  },
-  {
-    "name": "Community Care RX",
-    "longitude": -73.6333155,
-    "latitude": 40.7035208,
-    "type": "Pharmacy",
-    "address": "86 Front St, Hempstead, NY 11550"
   },
   {
     "name": "Community Memorial Hospital",
@@ -855,13 +827,6 @@ export const locationData = [
   },
   {
     "name": "CVS Pharmacy",
-    "longitude": -73.988327,
-    "latitude": 41.1623158,
-    "type": "Pharmacy",
-    "address": "280 N Main St, New City, NY 10956"
-  },
-  {
-    "name": "CVS Pharmacy",
     "longitude": -73.945237,
     "latitude": 40.6162551,
     "type": "Pharmacy",
@@ -908,13 +873,6 @@ export const locationData = [
     "latitude": 40.8256704,
     "type": "Pharmacy",
     "address": "3775 E Tremont Ave, Bronx, NY 10465"
-  },
-  {
-    "name": "CVS Pharmacy",
-    "longitude": -73.5936878,
-    "latitude": 40.6437379,
-    "type": "Pharmacy",
-    "address": "403 Atlantic Ave, Freeport, NY 11520"
   },
   {
     "name": "CVS Pharmacy",
@@ -981,13 +939,6 @@ export const locationData = [
   },
   {
     "name": "CVS Pharmacy",
-    "longitude": -73.988742,
-    "latitude": 42.2938828,
-    "type": "Pharmacy",
-    "address": "7600 NY-32, Cairo, NY 12413"
-  },
-  {
-    "name": "CVS Pharmacy",
     "longitude": -73.8719071,
     "latitude": 40.712829,
     "type": "Pharmacy",
@@ -1023,13 +974,6 @@ export const locationData = [
   },
   {
     "name": "CVS Pharmacy",
-    "longitude": -77.5609233,
-    "latitude": 43.1238494,
-    "type": "Pharmacy",
-    "address": "2100 Monroe Ave, Rochester, NY 14618"
-  },
-  {
-    "name": "CVS Pharmacy",
     "longitude": -73.9289095,
     "latitude": 40.6343505,
     "type": "Pharmacy",
@@ -1041,13 +985,6 @@ export const locationData = [
     "latitude": 43.169724,
     "type": "Pharmacy",
     "address": "525 Spencerport Rd, Rochester, NY 14606"
-  },
-  {
-    "name": "Dale Pharmacy & Surgical",
-    "longitude": -73.8393225,
-    "latitude": 40.695812,
-    "type": "Pharmacy",
-    "address": "108-13 Jamaica Ave, Jamaica, NY 11418"
   },
   {
     "name": "Dansville Police Department",
@@ -1113,13 +1050,6 @@ export const locationData = [
     "address": "1453 Jefferson Ave, Buffalo, NY 14208"
   },
   {
-    "name": "Dolgeville Police Department",
-    "longitude": -74.7705087,
-    "latitude": 43.1033012,
-    "type": "Police",
-    "address": "41 N Main St, Dolgeville, NY 13329"
-  },
-  {
     "name": "Dongan Hills Pharmacy",
     "longitude": -74.1006801,
     "latitude": 40.5915529,
@@ -1135,13 +1065,6 @@ export const locationData = [
   },
   {
     "name": "Duane Reade",
-    "longitude": -73.9902571,
-    "latitude": 40.734279,
-    "type": "Pharmacy",
-    "address": "1 Union Square E, New York, NY 10003"
-  },
-  {
-    "name": "Duane Reade",
     "longitude": -73.9900714,
     "latitude": 40.7341994,
     "type": "Pharmacy",
@@ -1153,13 +1076,6 @@ export const locationData = [
     "latitude": 40.7204998,
     "type": "Pharmacy",
     "address": "107-16 71st Ave, Flushing, NY 11375"
-  },
-  {
-    "name": "Duane Reade",
-    "longitude": -73.9573556,
-    "latitude": 40.7825136,
-    "type": "Pharmacy",
-    "address": "1231 Madison Ave, New York, NY 10128"
   },
   {
     "name": "Duane Reade",
@@ -1358,13 +1274,6 @@ export const locationData = [
     "address": "15 S Stone Ave, Elmsford, NY 10523"
   },
   {
-    "name": "Erie Community College Safety Office City Campus",
-    "longitude": -78.8758761,
-    "latitude": 42.8794249,
-    "type": "School",
-    "address": "121 Ellicott St, Buffalo, NY 14203"
-  },
-  {
     "name": "Erie Community College Safety Office South Campus",
     "longitude": -78.7981276,
     "latitude": 42.7729759,
@@ -1470,13 +1379,6 @@ export const locationData = [
     "address": "1 Floral Blvd, Floral Park, NY 11001"
   },
   {
-    "name": "Floral Park Police Department",
-    "longitude": -73.7315829,
-    "latitude": 40.7773752,
-    "type": "Police",
-    "address": "Great Neck Rd, North Hempstead, NY 11021"
-  },
-  {
     "name": "Fort Edward Police Department",
     "longitude": -73.579773,
     "latitude": 43.2636867,
@@ -1503,13 +1405,6 @@ export const locationData = [
     "latitude": 40.7210754,
     "type": "Pharmacy",
     "address": "204-19 Hillside Avenue, Hollis, NY 11423"
-  },
-  {
-    "name": "Franklin County Sheriff's Office",
-    "longitude": -74.3182999,
-    "latitude": 44.869814,
-    "type": "Police",
-    "address": "45 Bare Hill Rd, Malone, NY 12953"
   },
   {
     "name": "Franklin Square Pharmacy",
@@ -1902,13 +1797,6 @@ export const locationData = [
     "latitude": 42.4155595,
     "type": "Pharmacy",
     "address": "4852 NY-81, Greenville, NY 12083"
-  },
-  {
-    "name": "Kenmore Mercy Hospital",
-    "longitude": -78.8799441,
-    "latitude": 42.9776518,
-    "type": "Hospital",
-    "address": "2950 Elmwood Ave, Kenmore, NY 14217"
   },
   {
     "name": "Kenmore Police Department",
@@ -2380,13 +2268,6 @@ export const locationData = [
     "address": "1 Town Hall Plaza, Valhalla, NY 10595"
   },
   {
-    "name": "Mount Vernon Police Department",
-    "longitude": -73.8387574,
-    "latitude": 40.9127886,
-    "type": "Police",
-    "address": "2 Roosevelt Square N, Mt Vernon, NY 10550"
-  },
-  {
     "name": "Mt St Mary's Hospital",
     "longitude": -79.0326191,
     "latitude": 43.1541101,
@@ -2394,25 +2275,11 @@ export const locationData = [
     "address": "5300 Military Rd, Lewiston, NY 14092"
   },
   {
-    "name": "Nassau County Police Department First Precinct",
-    "longitude": -73.6093282,
-    "latitude": 40.6508013,
-    "type": "Police",
-    "address": "900 Merrick Rd, Baldwin, NY 11510"
-  },
-  {
     "name": "Nassau County Police Department Fourth Precinct",
     "longitude": -73.6900401,
     "latitude": 40.6464574,
     "type": "Police",
     "address": "1699 Broadway, Hewlett, NY 11557"
-  },
-  {
-    "name": "Nassau County Police Department",
-    "longitude": -73.6391398,
-    "latitude": 40.736645,
-    "type": "Police",
-    "address": "1490 Franklin Ave, Mineola, NY 11501"
   },
   {
     "name": "Nassau County Police Department 5th Precinct",
@@ -2870,13 +2737,6 @@ export const locationData = [
     "address": "20 Lafayette Park, Oxford, NY 13830"
   },
   {
-    "name": "Paak Pharmacy",
-    "longitude": -73.0074579,
-    "latitude": 40.791905,
-    "type": "Pharmacy",
-    "address": "689 Medford Ave, Patchogue, NY 11772"
-  },
-  {
     "name": "Palmer Pharmacy",
     "longitude": -76.4983664,
     "latitude": 42.4385347,
@@ -3066,13 +2926,6 @@ export const locationData = [
     "address": "3 County Center, Carmel Hamlet, NY 10512"
   },
   {
-    "name": "Putnam Hospital Center",
-    "longitude": -73.6637171,
-    "latitude": 41.3832085,
-    "type": "Police",
-    "address": "670 Stoneleigh Ave, Carmel Hamlet, NY 10512"
-  },
-  {
     "name": "Putnam Valley Town Hall",
     "longitude": -73.8658799,
     "latitude": 41.3680399,
@@ -3120,13 +2973,6 @@ export const locationData = [
     "latitude": 42.762086,
     "type": "Pharmacy",
     "address": "4481 Lake Shore Rd, Hamburg, NY 14075"
-  },
-  {
-    "name": "Rochester General Hospital",
-    "longitude": -77.5867238,
-    "latitude": 43.1930205,
-    "type": "Hospital",
-    "address": "1415 Portland Ave, Rochester, NY 14621"
   },
   {
     "name": "Rock Hill Healthmart Pharmacy",
@@ -3241,13 +3087,6 @@ export const locationData = [
     "address": "6010 County Farm Rd, Ballston Spa, NY 12020"
   },
   {
-    "name": "Saratoga Police Department",
-    "longitude": -73.7842376,
-    "latitude": 43.0833295,
-    "type": "Police",
-    "address": "474 Broadway, Saratoga Springs, NY 12866"
-  },
-  {
     "name": "Saratoga Springs Police Department",
     "longitude": -73.7840416,
     "latitude": 43.0832593,
@@ -3309,13 +3148,6 @@ export const locationData = [
     "latitude": 42.3409968,
     "type": "Police",
     "address": "323 Owego St, Montour Falls, NY 14865"
-  },
-  {
-    "name": "Schuyler County Sheriff / Odessa Fire Department",
-    "longitude": -76.7909279,
-    "latitude": 42.337129,
-    "type": "Police",
-    "address": "300 Main St, Odessa, NY 14869"
   },
   {
     "name": "Schuyler County Sheriff's Office",
@@ -3463,13 +3295,6 @@ export const locationData = [
     "latitude": 42.079808,
     "type": "Police",
     "address": "766 Foote Ave, Jamestown, NY 14701"
-  },
-  {
-    "name": "St. George Pharmacy",
-    "longitude": -74.0773914,
-    "latitude": 40.6438301,
-    "type": "Pharmacy",
-    "address": "99 Stuyvesant Pl, Staten Island, NY 10301"
   },
   {
     "name": "St. Lawrence County Sheriff's Office",
@@ -3708,20 +3533,6 @@ export const locationData = [
     "latitude": 42.5003364,
     "type": "School",
     "address": "118 Freeville Rd, Dryden, NY 13053"
-  },
-  {
-    "name": "Tops Markets",
-    "longitude": -79.243529,
-    "latitude": 42.1097415,
-    "type": "Pharmacy",
-    "address": "2000 Washington St, Jamestown, NY 14701"
-  },
-  {
-    "name": "Tops Markets",
-    "longitude": -78.6837337,
-    "latitude": 42.8998539,
-    "type": "Pharmacy",
-    "address": "5175 Broadway, Depew, NY 14043"
   },
   {
     "name": "Town of Cicero Police Department",
@@ -4107,13 +3918,6 @@ export const locationData = [
     "latitude": 40.878411,
     "type": "Pharmacy",
     "address": "5564 Broadway, Bronx, NY 10463"
-  },
-  {
-    "name": "Walgreens",
-    "longitude": -73.9849812,
-    "latitude": 40.768062,
-    "type": "Pharmacy",
-    "address": "353 W 57th St FRNT 2, New York, NY 10019"
   },
   {
     "name": "Walgreens",
