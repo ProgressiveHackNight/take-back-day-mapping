@@ -37,7 +37,7 @@
 * In order to be used as a library, this app must be built.
  ### To update:
  * In the publish branch in this directory:
-  * Rebase in the current develop branch `git rebase -i develop`
+  * merge in the current develop branch `git merge develop`
   * Delete the lib folder (this seems to be necessary in order to not break styling - I think the bash command I used to copy over assets does not replace exising files)
   * Build the library `yarn export`
   * Commit your changes and push to origin (still on the publish branch - don't push to develop)
